@@ -1,19 +1,20 @@
-define scripts_dir = D:/PWR/Semestr_10/Bazy/GIT/SQL_SCRIPTS
+define scripts_dir = ./
 alter system flush shared_pool;
-alter system flush buffer_cache;
 SET SERVEROUTPUT ON;
+SET FEEDBACK OFF
+
 exec dbms_output.enable;
 
 ALTER SESSION SET NLS_DATE_FORMAT = 'MM/DD/SYYYY';
-/*----------------------ZESTAW 3 - 1 -----------------------*/
+/*----------------------ZESTAW 1 - 1 -----------------------*/
 
 SAVEPOINT point;
 declare TIME_START TIMESTAMP; TIME_DIFF INTERVAL DAY(3) TO SECOND(9);
 BEGIN
-	dbms_output.put_line('ZESTAW 3 - 1');
+	dbms_output.put_line('ZESTAW 1 - 1');
 	SELECT SYSTIMESTAMP INTO TIME_START from dual;
 
-	@zestaw3_1.sql
+	@&scripts_dir/zestaw1_5.sql
 
 	SELECT SYSTIMESTAMP - TIME_START INTO TIME_DIFF from dual;
 	dbms_output.put_line(TIME_DIFF);
@@ -21,17 +22,16 @@ BEGIN
 END;
 /
 
-/*----------------------ZESTAW 3 - 2 -----------------------*/
+/*----------------------ZESTAW 1 - 2 -----------------------*/
 alter system flush shared_pool;
-alter system flush buffer_cache;
 
 SAVEPOINT point2;
 declare TIME_START TIMESTAMP; TIME_DIFF INTERVAL DAY(3) TO SECOND(9);
 BEGIN
-	dbms_output.put_line('ZESTAW 3 - 2');
+	dbms_output.put_line('ZESTAW 1 - 2');
 	SELECT SYSTIMESTAMP INTO TIME_START from dual;
 
-	@zestaw3_2.sql
+	@&scripts_dir/zestaw1_5.sql
 
 	SELECT SYSTIMESTAMP - TIME_START INTO TIME_DIFF from dual;
 	dbms_output.put_line(TIME_DIFF);
@@ -40,17 +40,16 @@ END;
 
 /
 
-/*----------------------ZESTAW 3 - 3 -----------------------*/
+/*----------------------ZESTAW 1 - 3 -----------------------*/
 alter system flush shared_pool;
-alter system flush buffer_cache;
 
 SAVEPOINT point2;
 declare TIME_START TIMESTAMP; TIME_DIFF INTERVAL DAY(3) TO SECOND(9);
 BEGIN
-	dbms_output.put_line('ZESTAW 3 - 3');
+	dbms_output.put_line('ZESTAW 1 - 3');
 	SELECT SYSTIMESTAMP INTO TIME_START from dual;
 
-	@zestaw3_3.sql
+	@&scripts_dir/zestaw1_5.sql
 
 	SELECT SYSTIMESTAMP - TIME_START INTO TIME_DIFF from dual;
 	dbms_output.put_line(TIME_DIFF);
@@ -59,16 +58,16 @@ END;
 
 /
 
-/*----------------------ZESTAW 3 - 4 -----------------------*/
+/*----------------------ZESTAW 1 - 4 -----------------------*/
 alter system flush shared_pool;
-alter system flush buffer_cache;
+
 SAVEPOINT point2;
 declare TIME_START TIMESTAMP; TIME_DIFF INTERVAL DAY(3) TO SECOND(9);
 BEGIN
-	dbms_output.put_line('ZESTAW 3 - 4');
+	dbms_output.put_line('ZESTAW 1 - 4');
 	SELECT SYSTIMESTAMP INTO TIME_START from dual;
 
-	@zestaw3_4.sql
+	@&scripts_dir/zestaw1_4.sql
 
 	SELECT SYSTIMESTAMP - TIME_START INTO TIME_DIFF from dual;
 	dbms_output.put_line(TIME_DIFF);
@@ -77,17 +76,16 @@ END;
 
 /
 
-/*----------------------ZESTAW 3 - 5 -----------------------*/
+/*----------------------ZESTAW 1 - 5 -----------------------*/
 alter system flush shared_pool;
-alter system flush buffer_cache;
 
 SAVEPOINT point2;
 declare TIME_START TIMESTAMP; TIME_DIFF INTERVAL DAY(3) TO SECOND(9);
 BEGIN
-	dbms_output.put_line('ZESTAW 3 - 5');
+	dbms_output.put_line('ZESTAW 1 - 5');
 	SELECT SYSTIMESTAMP INTO TIME_START from dual;
 
-	@zestaw3_5.sql
+	@&scripts_dir/zestaw1_5.sql
 
 	SELECT SYSTIMESTAMP - TIME_START INTO TIME_DIFF from dual;
 	dbms_output.put_line(TIME_DIFF);
@@ -96,17 +94,16 @@ END;
 
 /
 
-/*----------------------ZESTAW 3 - 6 -----------------------*/
+/*----------------------ZESTAW 1 - 6 -----------------------*/
 alter system flush shared_pool;
-alter system flush buffer_cache;
 
 SAVEPOINT point2;
 declare TIME_START TIMESTAMP; TIME_DIFF INTERVAL DAY(3) TO SECOND(9);
 BEGIN
-	dbms_output.put_line('ZESTAW 3 - 6');
+	dbms_output.put_line('ZESTAW 1 - 6');
 	SELECT SYSTIMESTAMP INTO TIME_START from dual;
 
-	@zestaw3_6.sql
+	@&scripts_dir/zestaw1_6.sql
 
 	SELECT SYSTIMESTAMP - TIME_START INTO TIME_DIFF from dual;
 	dbms_output.put_line(TIME_DIFF);
@@ -115,17 +112,16 @@ END;
 
 /
 
-/*----------------------ZESTAW 3 - 7 -----------------------*/
+/*----------------------ZESTAW 1 - 7 -----------------------*/
 alter system flush shared_pool;
-alter system flush buffer_cache;
 
 SAVEPOINT point2;
 declare TIME_START TIMESTAMP; TIME_DIFF INTERVAL DAY(3) TO SECOND(9);
 BEGIN
-	dbms_output.put_line('ZESTAW 3 - 7');
+	dbms_output.put_line('ZESTAW 1 - 7');
 	SELECT SYSTIMESTAMP INTO TIME_START from dual;
 
-	@zestaw3_7.sql
+	@&scripts_dir/zestaw1_7.sql
 
 	SELECT SYSTIMESTAMP - TIME_START INTO TIME_DIFF from dual;
 	dbms_output.put_line(TIME_DIFF);
@@ -134,17 +130,16 @@ END;
 
 /
 
-/*----------------------ZESTAW 3 - 8 -----------------------*/
+/*----------------------ZESTAW 1 - 8 -----------------------*/
 alter system flush shared_pool;
-alter system flush buffer_cache;
 
 SAVEPOINT point2;
 declare TIME_START TIMESTAMP; TIME_DIFF INTERVAL DAY(3) TO SECOND(9);
 BEGIN
-	dbms_output.put_line('ZESTAW 3 - 8');
+	dbms_output.put_line('ZESTAW 1 - 8');
 	SELECT SYSTIMESTAMP INTO TIME_START from dual;
 
-	@zestaw3_8.sql
+	@&scripts_dir/zestaw1_8.sql
 
 	SELECT SYSTIMESTAMP - TIME_START INTO TIME_DIFF from dual;
 	dbms_output.put_line(TIME_DIFF);
@@ -152,3 +147,4 @@ BEGIN
 END;
 
 /
+

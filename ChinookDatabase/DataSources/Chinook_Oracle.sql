@@ -18,12 +18,18 @@ DROP USER chinook CASCADE;
 /*******************************************************************************
    Create database
 ********************************************************************************/
+alter system set db_cache_size=50M scope=both;
+alter system set db_2k_cache_size=50M scope=both;
+CREATE tablespace tbs_2k datafile 'tbs_2k.dbf' size 1g blocksize 2k;
+
+
 
 CREATE USER chinook
 IDENTIFIED BY p4ssw0rd
-DEFAULT TABLESPACE users
+DEFAULT TABLESPACE tbs_2k
 TEMPORARY TABLESPACE temp
-QUOTA 10M ON users;
+QUOTA 10M ON tbs_2k;
+
 
 GRANT connect to chinook;
 GRANT resource to chinook;
@@ -32,6 +38,7 @@ GRANT create table TO chinook;
 GRANT create view TO chinook;
 GRANT select any dictionary to chinook;
 GRANT alter system to chinook;
+GRANT SYSOPER to chinook container=all;
 
 
 conn chinook/p4ssw0rd
