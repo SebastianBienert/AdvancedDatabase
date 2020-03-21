@@ -30,7 +30,8 @@ GRANT resource to chinook;
 GRANT create session TO chinook;
 GRANT create table TO chinook;
 GRANT create view TO chinook;
-
+GRANT select any dictionary to chinook;
+GRANT alter system to chinook;
 
 
 conn chinook/p4ssw0rd
