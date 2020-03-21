@@ -13,7 +13,7 @@ BEGIN
 	dbms_output.put_line('ZESTAW 3 - 1');
 	SELECT SYSTIMESTAMP INTO TIME_START from dual;
 
-	@&scripts_dir/zestaw3_2.sql
+	@zestaw3_1.sql
 
 	SELECT SYSTIMESTAMP - TIME_START INTO TIME_DIFF from dual;
 	dbms_output.put_line(TIME_DIFF);
@@ -31,7 +31,7 @@ BEGIN
 	dbms_output.put_line('ZESTAW 3 - 2');
 	SELECT SYSTIMESTAMP INTO TIME_START from dual;
 
-	@&scripts_dir/zestaw3_2.sql
+	@zestaw3_2.sql
 
 	SELECT SYSTIMESTAMP - TIME_START INTO TIME_DIFF from dual;
 	dbms_output.put_line(TIME_DIFF);
@@ -50,7 +50,7 @@ BEGIN
 	dbms_output.put_line('ZESTAW 3 - 3');
 	SELECT SYSTIMESTAMP INTO TIME_START from dual;
 
-	@&scripts_dir/zestaw3_3.sql
+	@zestaw3_3.sql
 
 	SELECT SYSTIMESTAMP - TIME_START INTO TIME_DIFF from dual;
 	dbms_output.put_line(TIME_DIFF);
@@ -68,7 +68,7 @@ BEGIN
 	dbms_output.put_line('ZESTAW 3 - 4');
 	SELECT SYSTIMESTAMP INTO TIME_START from dual;
 
-	@&scripts_dir/zestaw3_4.sql
+	@zestaw3_4.sql
 
 	SELECT SYSTIMESTAMP - TIME_START INTO TIME_DIFF from dual;
 	dbms_output.put_line(TIME_DIFF);
@@ -87,7 +87,7 @@ BEGIN
 	dbms_output.put_line('ZESTAW 3 - 5');
 	SELECT SYSTIMESTAMP INTO TIME_START from dual;
 
-	@&scripts_dir/zestaw3_5.sql
+	@zestaw3_5.sql
 
 	SELECT SYSTIMESTAMP - TIME_START INTO TIME_DIFF from dual;
 	dbms_output.put_line(TIME_DIFF);
@@ -106,7 +106,7 @@ BEGIN
 	dbms_output.put_line('ZESTAW 3 - 6');
 	SELECT SYSTIMESTAMP INTO TIME_START from dual;
 
-	@&scripts_dir/zestaw3_6.sql
+	@zestaw3_6.sql
 
 	SELECT SYSTIMESTAMP - TIME_START INTO TIME_DIFF from dual;
 	dbms_output.put_line(TIME_DIFF);
@@ -125,7 +125,7 @@ BEGIN
 	dbms_output.put_line('ZESTAW 3 - 7');
 	SELECT SYSTIMESTAMP INTO TIME_START from dual;
 
-	@&scripts_dir/zestaw3_7.sql
+	@zestaw3_7.sql
 
 	SELECT SYSTIMESTAMP - TIME_START INTO TIME_DIFF from dual;
 	dbms_output.put_line(TIME_DIFF);
@@ -144,7 +144,7 @@ BEGIN
 	dbms_output.put_line('ZESTAW 3 - 8');
 	SELECT SYSTIMESTAMP INTO TIME_START from dual;
 
-	@&scripts_dir/zestaw3_8.sql
+	@zestaw3_8.sql
 
 	SELECT SYSTIMESTAMP - TIME_START INTO TIME_DIFF from dual;
 	dbms_output.put_line(TIME_DIFF);
