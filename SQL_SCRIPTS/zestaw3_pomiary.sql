@@ -1,5 +1,6 @@
 define scripts_dir = D:/PWR/Semestr_10/Bazy/GIT/SQL_SCRIPTS
 alter system flush shared_pool;
+alter system flush buffer_cache;
 SET SERVEROUTPUT ON;
 exec dbms_output.enable;
 
@@ -20,8 +21,9 @@ BEGIN
 END;
 /
 
-/*----------------------ZESTAW 3 - 1 -----------------------*/
+/*----------------------ZESTAW 3 - 2 -----------------------*/
 alter system flush shared_pool;
+alter system flush buffer_cache;
 
 SAVEPOINT point2;
 declare TIME_START TIMESTAMP; TIME_DIFF INTERVAL DAY(3) TO SECOND(9);
@@ -40,6 +42,7 @@ END;
 
 /*----------------------ZESTAW 3 - 3 -----------------------*/
 alter system flush shared_pool;
+alter system flush buffer_cache;
 
 SAVEPOINT point2;
 declare TIME_START TIMESTAMP; TIME_DIFF INTERVAL DAY(3) TO SECOND(9);
@@ -58,7 +61,7 @@ END;
 
 /*----------------------ZESTAW 3 - 4 -----------------------*/
 alter system flush shared_pool;
-
+alter system flush buffer_cache;
 SAVEPOINT point2;
 declare TIME_START TIMESTAMP; TIME_DIFF INTERVAL DAY(3) TO SECOND(9);
 BEGIN
@@ -76,6 +79,7 @@ END;
 
 /*----------------------ZESTAW 3 - 5 -----------------------*/
 alter system flush shared_pool;
+alter system flush buffer_cache;
 
 SAVEPOINT point2;
 declare TIME_START TIMESTAMP; TIME_DIFF INTERVAL DAY(3) TO SECOND(9);
@@ -94,6 +98,7 @@ END;
 
 /*----------------------ZESTAW 3 - 6 -----------------------*/
 alter system flush shared_pool;
+alter system flush buffer_cache;
 
 SAVEPOINT point2;
 declare TIME_START TIMESTAMP; TIME_DIFF INTERVAL DAY(3) TO SECOND(9);
@@ -112,6 +117,7 @@ END;
 
 /*----------------------ZESTAW 3 - 7 -----------------------*/
 alter system flush shared_pool;
+alter system flush buffer_cache;
 
 SAVEPOINT point2;
 declare TIME_START TIMESTAMP; TIME_DIFF INTERVAL DAY(3) TO SECOND(9);
@@ -130,6 +136,7 @@ END;
 
 /*----------------------ZESTAW 3 - 8 -----------------------*/
 alter system flush shared_pool;
+alter system flush buffer_cache;
 
 SAVEPOINT point2;
 declare TIME_START TIMESTAMP; TIME_DIFF INTERVAL DAY(3) TO SECOND(9);
