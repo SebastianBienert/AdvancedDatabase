@@ -1,9 +1,8 @@
-define scripts_dir = ./
+define scripts_dir = ./zestaw1
 alter system flush shared_pool;
 SET SERVEROUTPUT ON;
 SET FEEDBACK OFF;
-spool output.txt
-set serveroutput on
+spool output1.txt
 exec dbms_output.enable;
 
 ALTER SESSION SET NLS_DATE_FORMAT = 'MM/DD/SYYYY';
@@ -146,7 +145,7 @@ BEGIN
 	dbms_output.put_line(TIME_DIFF);
 	ROLLBACK TO point2;
 END;
-
+/
 spool off
 /
 quit
