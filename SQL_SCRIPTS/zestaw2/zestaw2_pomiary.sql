@@ -1,4 +1,4 @@
-define scripts_dir = D:/ZaawansowaneBazy/ChinookDatabase/ChinookDatabase/SQL_SCRIPTS/zestaw2
+define scripts_dir = ./
 alter system flush shared_pool;
 SET SERVEROUTPUT ON;
 exec dbms_output.enable;
