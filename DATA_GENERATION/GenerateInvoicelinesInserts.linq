@@ -11,7 +11,7 @@ void Main()
 	int totalCustomers = 1000;
 	int totalTracks = 3177;
 
-	//CreateILs(2441, 100000, totalInvoices, totalTracks);
+	CreateILs(2441, 100000, totalInvoices, totalTracks);
 	CreateInvoices(413, totalInvoices, totalCustomers);
 }
 
@@ -25,7 +25,7 @@ void CreateILs(int fromId, int toId, int maxInvoiceId, int maxTrackId)
 		lines.Add(line);
 	}
 	
-	File.WriteAllLines($@"{outputPath}\invoicelines.txt", lines);
+	File.WriteAllLines($@"{outputPath}\INVOICELINE{toId}.sql", lines);
 }
 
 void CreateInvoices(int fromId, int toId, int maxCustomerId)
@@ -49,7 +49,7 @@ void CreateInvoices(int fromId, int toId, int maxCustomerId)
 		lines.Add(line + valuesPart);
 	}
 	
-	File.WriteAllLines($@"{outputPath}\invoices.txt", lines);
+	File.WriteAllLines($@"{outputPath}\INVOICE{toId}.sql", lines);
 }
 
 DateTime RandomDate()
