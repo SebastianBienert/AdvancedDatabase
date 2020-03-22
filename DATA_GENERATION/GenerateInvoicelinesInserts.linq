@@ -11,7 +11,7 @@ void Main()
 	int totalCustomers = 1000;
 	int totalTracks = 3177;
 
-	CreateILs(2441, 100000, totalInvoices, totalTracks);
+	CreateILs(2441, 60000, totalInvoices, totalTracks);
 	CreateInvoices(413, totalInvoices, totalCustomers);
 }
 
