@@ -15830,5 +15830,9 @@ INSERT INTO PlaylistTrack (PlaylistId, TrackId) VALUES (17, 2096);
 INSERT INTO PlaylistTrack (PlaylistId, TrackId) VALUES (17, 3290);
 INSERT INTO PlaylistTrack (PlaylistId, TrackId) VALUES (18, 597);
 
+@CUSTOMER1000.sql
+@INVOICE25000.sql
+@INVOICELINE60000.sql
+
 commit;
 exit;
