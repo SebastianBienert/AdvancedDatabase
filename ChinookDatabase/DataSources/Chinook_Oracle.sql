@@ -28,7 +28,7 @@ CREATE USER chinook
 IDENTIFIED BY p4ssw0rd
 DEFAULT TABLESPACE tbs_2k
 TEMPORARY TABLESPACE temp
-QUOTA 10M ON tbs_2k;
+QUOTA 1G ON tbs_2k;
 
 
 GRANT connect to chinook;
@@ -15832,7 +15832,7 @@ INSERT INTO PlaylistTrack (PlaylistId, TrackId) VALUES (18, 597);
 
 @CUSTOMER1000.sql
 @INVOICE25000.sql
-@INVOICELINE60000.sql
+@INVOICELINE150000.sql
 
 commit;
 exit;
