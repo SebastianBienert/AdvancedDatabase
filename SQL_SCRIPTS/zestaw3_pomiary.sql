@@ -154,5 +154,4 @@ BEGIN
 END;
 /
 spool off
-/
 quit
