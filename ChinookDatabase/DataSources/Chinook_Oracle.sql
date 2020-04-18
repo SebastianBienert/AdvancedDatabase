@@ -37,6 +37,8 @@ GRANT create session TO chinook;
 GRANT create table TO chinook;
 GRANT create view TO chinook;
 GRANT select any dictionary to chinook;
+GRANT create any trigger to chinook;
+GRANT administer database trigger to chinook;
 GRANT alter system to chinook;
 GRANT SYSOPER to chinook container=all;
 
