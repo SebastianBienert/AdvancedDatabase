@@ -28,16 +28,17 @@ END;
 
 -- R2 --
 create or replace TRIGGER Verify_Playlist
-BEFORE INSERT ON PLAYLISTTRACK
+AFTER INSERT ON PLAYLISTTRACK
 FOR EACH ROW
 DECLARE
-    track_count INT;
+    genre_name VARCHAR(100);
 BEGIN
-    SELECT COUNT(*) INTO track_count
-    FROM PLAYLISTTRACK p
-    WHERE :new.PLAYLISTID = p.PLAYLISTID;
+    SELECT g.NAME into genre_name
+    FROM Track t
+    INNER JOIN GENRE g on t.GENREID = g.GENREID
+    WHERE t.TRACKID = 1;
 
-    IF (track_count >= 50)
+    IF (genre_name = 'Jazz')
     THEN
         raise_application_error(-20000, 'Playlist cannot have more than 50 tracks!');
     END IF;

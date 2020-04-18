@@ -1,7 +1,7 @@
 -- Zmniejszenie ceny wszystkich utworów z gatunku Reggae o 1 dolara, które pojawiły się na playlistach przynajmniej 2 razy i które zostały zakupione przynajmniej raz w 2009 roku.
 UPDATE track
 SET
-    unitprice = ( unitprice - 1 )
+    unitprice = ( unitprice - 0.1 )
 WHERE
     trackid IN (
         SELECT UNIQUE
