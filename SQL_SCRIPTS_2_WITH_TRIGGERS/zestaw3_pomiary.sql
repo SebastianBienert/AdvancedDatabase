@@ -152,6 +152,25 @@ BEGIN
 	dbms_output.put_line(TIME_DIFF);
 	ROLLBACK TO point2;
 END;
+
+/
+
+/*----------------------ZESTAW 3 - 9 -----------------------*/
+alter system flush shared_pool;
+alter system flush buffer_cache;
+
+SAVEPOINT point2;
+declare TIME_START TIMESTAMP; TIME_DIFF INTERVAL DAY(3) TO SECOND(9);
+BEGIN
+	--dbms_output.put_line('ZESTAW 3 - 9');
+	SELECT SYSTIMESTAMP INTO TIME_START from dual;
+
+	@zestaw3_9.sql
+
+	SELECT SYSTIMESTAMP - TIME_START INTO TIME_DIFF from dual;
+	dbms_output.put_line(TIME_DIFF);
+	ROLLBACK TO point2;
+END;
 /
 spool off
 quit

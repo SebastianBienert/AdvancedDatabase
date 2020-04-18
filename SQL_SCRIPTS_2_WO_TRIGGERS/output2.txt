@@ -1,8 +1,22 @@
-+000 00:00:00.067000000                                                         
-+000 00:00:00.127000000                                                         
-+000 00:00:00.201000000                                                         
-+000 00:00:00.046000000                                                         
-+000 00:00:00.156000000                                                         
-+000 00:00:00.214000000                                                         
-+000 00:00:00.300000000                                                         
-+000 00:00:00.044000000                                                         
++000 00:00:00.057000000                                                         
++000 00:00:00.110000000                                                         
++000 00:00:00.090000000                                                         
++000 00:00:00.031000000                                                         
++000 00:00:00.104000000                                                         
++000 00:00:00.140000000                                                         
++000 00:00:00.236000000                                                         
++000 00:00:00.043000000                                                         
+CREATE TABLE ExampleTable
+*
+ERROR at line 6:
+ORA-06550: line 6, column 1: 
+PLS-00103: Encountered the symbol "CREATE" when expecting one of the following: 
+( begin case declare end exception exit for goto if loop mod 
+null pragma raise return select update while with 
+<an identifier> <a double-quoted delimited-identifier> 
+<a bind variable> << continue close current delete fetch lock 
+insert open rollback savepoint set sql execute commit forall 
+merge pipe purge json_exists json_value json_query 
+json_object json_array 
+
+
