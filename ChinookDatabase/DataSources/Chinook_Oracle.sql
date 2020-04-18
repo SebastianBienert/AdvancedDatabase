@@ -41,6 +41,7 @@ GRANT create any trigger to chinook;
 GRANT administer database trigger to chinook;
 GRANT alter system to chinook;
 GRANT SYSOPER to chinook container=all;
+GRANT create job to chinook;
 
 
 conn chinook/p4ssw0rd
