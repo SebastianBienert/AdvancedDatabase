@@ -26,6 +26,8 @@ BEGIN
       WHERE i.INVOICEID = :NEW.INVOICEID;
 END;
 
+/
+
 -- R2 --
 create or replace TRIGGER Verify_Playlist
 AFTER INSERT ON PLAYLISTTRACK
@@ -45,6 +47,30 @@ BEGIN
 
 END;
 
+/
+
+-- R3 --
+CREATE OR REPLACE TRIGGER logon_trigger
+  AFTER LOGON
+  ON DATABASE
+BEGIN
+  INSERT INTO Logs (Timestamp, Message, Type)
+  SELECT sysdate, COUNT(*), 'COUNT' FROM INVOICE
+  WHERE INVOICEDATE > (
+    SELECT TIMESTAMP FROM (
+      SELECT * FROM Logs
+      WHERE Message = USER AND Type = 'LOGON'
+      ORDER BY TIMESTAMP DESC
+    )
+    WHERE ROWNUM = 1
+  );
+ 
+  INSERT INTO Logs (Timestamp, Message, Type)
+  VALUES (sysdate, USER, 'LOGON');
+END;
+
+/
+
 -- R4 --
 BEGIN
     DBMS_SCHEDULER.create_job (
@@ -62,13 +88,13 @@ END;',
         comments        => 'Job defined entirely by the CREATE JOB procedure.');
 END;
 
+/
+
 -- R5 --
-ALTER TABLE TRACK
-ADD CONSTRAINT Track_UnitPrice CHECK (UNITPRICE >= 0);
-ALTER TABLE INVOICELINE
-ADD CONSTRAINT Invoiceline_UnitPrice CHECK (UNITPRICE >= 0);
-ALTER TABLE INVOICE
-ADD CONSTRAINT Invoice_UnitPrice CHECK (TOTAL >= 0);
+ALTER TABLE TRACK ADD CONSTRAINT Track_UnitPrice CHECK (UNITPRICE >= 0);
+ALTER TABLE INVOICELINE ADD CONSTRAINT Invoiceline_UnitPrice CHECK (UNITPRICE >= 0);
+ALTER TABLE INVOICE ADD CONSTRAINT Invoice_UnitPrice CHECK (TOTAL >= 0);
+
 
 -- R6 --
 CREATE OR REPLACE TRIGGER Create_tables
@@ -78,6 +104,7 @@ BEGIN
     VALUES(systimestamp, 'OBJECT: ' || SYS.DICTIONARY_OBJ_NAME || ' TYPE: ' || SYS.DICTIONARY_OBJ_TYPE || 'EVENT: ' || SYS.sysevent || 'USER: ' || USER, 'Table');
 END;
 
+/
 
 -- R7 --
 CREATE OR REPLACE TRIGGER system_error
@@ -99,3 +126,8 @@ BEGIN
    dbms_utility.format_error_stack || ' SQL: ' || stmt, 'SYSTEM');
    commit;
 END system_error;
+
+/
+COMMIT;
+EXIT;
+quit
