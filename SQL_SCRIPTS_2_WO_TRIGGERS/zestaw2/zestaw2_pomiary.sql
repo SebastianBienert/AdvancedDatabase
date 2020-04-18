@@ -160,7 +160,7 @@ BEGIN
 
 	SELECT SYSTIMESTAMP - TIME_START INTO TIME_DIFF from dual;
 	dbms_output.put_line(TIME_DIFF);
-	ROLLBACK TO point2;
+	EXECUTE IMMEDIATE 'DROP TABLE ExampleTable';
 END;
 
 /

@@ -171,6 +171,7 @@ BEGIN
 	dbms_output.put_line(TIME_DIFF);
 	ROLLBACK TO point2;
 END;
+
 /
 spool off
 quit

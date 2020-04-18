@@ -153,14 +153,14 @@ alter system flush shared_pool;
 SAVEPOINT point2;
 declare TIME_START TIMESTAMP; TIME_DIFF INTERVAL DAY(3) TO SECOND(9);
 BEGIN
-	--dbms_output.put_line('ZESTAW 2 - 8');
+	--dbms_output.put_line('ZESTAW 2 - 9');
 	SELECT SYSTIMESTAMP INTO TIME_START from dual;
 
 	@&scripts_dir/zestaw2_9.sql
 
 	SELECT SYSTIMESTAMP - TIME_START INTO TIME_DIFF from dual;
 	dbms_output.put_line(TIME_DIFF);
-	ROLLBACK TO point2;
+	EXECUTE IMMEDIATE 'DROP TABLE ExampleTable';
 END;
 /
 spool off
