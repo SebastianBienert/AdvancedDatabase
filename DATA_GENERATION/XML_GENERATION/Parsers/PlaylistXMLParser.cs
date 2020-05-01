@@ -1,0 +1,47 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Xml.Schema;
+using XML_GENERATION.Models;
+
+namespace XML_GENERATION.Parsers
+{
+    public class PlaylistXMLParser
+    {
+        public static string XML_SOURCE_PATH = Program.PROJECT_DIR + @"\..\..\DATA\xml3_source.json";
+        public static string XML_PATH = Program.PROJECT_DIR + @"\..\..\xml3.xml";
+
+        public static IEnumerable<(int, string)> Parse(IEnumerable<PlaylistXMLItem> items)
+        {
+            var playlists = items.GroupBy(x => x.playlistid);
+            var xmls = playlists.Select(g =>
+            {
+                var xml = new StringBuilder();
+                xml.AppendLine(@"<?xml version=""1.0"" encoding=""UTF - 8""?>");
+                xml.AppendLine("<Tracks>");
+                var tracks = g.GroupBy(x => x.trackid).Select(t =>
+                {
+                    var xmlStringBuilder = new StringBuilder();
+                    var invoiceDates = t.Select(x => DateTime.Parse(x.invoicedate));
+                    var maxDate = invoiceDates.Max();
+                    xmlStringBuilder.AppendLine(@$"<Track id=""{t.Key}"">");
+                    xmlStringBuilder.AppendLine($"<LastPurchase>{maxDate:dd/MM/yyyy}</LastPurchase>");
+                    xmlStringBuilder.AppendLine($"<Genre>{t.First().genre}</Genre>");
+                    xmlStringBuilder.AppendLine($"<Length>{t.First().milliseconds}</Length>");
+                    xmlStringBuilder.AppendLine($"<Name>{t.First().track}</Name>");
+                    xmlStringBuilder.AppendLine($"<Composer>{t.First().composer}</Composer>");
+                    xmlStringBuilder.AppendLine($"</Track>");
+                    return xmlStringBuilder.ToString();
+                });
+                foreach (var track in tracks)
+                {
+                    xml.AppendLine(track);
+                }
+                xml.AppendLine("</Tracks>");
+                return (g.Key, xml.ToString());
+            });
+            return xmls;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using XML_GENERATION.Models;
+using XML_GENERATION.Parsers;
+
+namespace XML_GENERATION
+{
+    class Program
+    {
+        public static string PROJECT_DIR = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
+
+        static void Main(string[] args)
+        {
+            // var firstXmlSource = JsonConvert.DeserializeObject<InvoiceLineXML>(File.ReadAllText(InvoiceLineXMLParser.XML1_SOURCE_PATH));
+            // var firstXml = InvoiceLineXMLParser.Parse(firstXmlSource.items);
+            // File.WriteAllLines(InvoiceLineXMLParser.FIRST_XML_PATH, firstXml);
+
+            // var secondXMLSource = JsonConvert.DeserializeObject<PlaylistXML>(File.ReadAllText(PlaylistXMLParser.XML_SOURCE_PATH));
+            // var secondXML = PlaylistXMLParser.Parse(secondXMLSource.items);
+            // File.WriteAllLines(PlaylistXMLParser.XML_PATH, secondXML.Select(x => x.Item2));
+
+            var thirdXMLSource = JsonConvert.DeserializeObject<ArtistXML>(File.ReadAllText(ArtistXMLParser.XML_SOURCE_PATH));
+            var thirdXML = ArtistXMLParser.Parse(thirdXMLSource.items);
+            File.WriteAllLines(ArtistXMLParser.XML_PATH, thirdXML.Select(x => x.Item2));
+
+            Console.ReadKey();
+        }
+
+       
+
+    }
+
+
+}
+
+
+

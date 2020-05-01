@@ -19,3 +19,5 @@ Packages/
 /obj/
 _ReSharper.*
 *.nupkg
+DATA_GENERATION/XML_GENERATION/.vs/
+.vs/
