@@ -9,9 +9,9 @@ namespace XML_GENERATION.Parsers
     public class ArtistXMLParser
     {
         public static string XML_SOURCE_PATH = Program.PROJECT_DIR + @"\..\..\DATA\xml3_source.json";
-        public static string XML_PATH = Program.PROJECT_DIR + @"\..\..\xml3.xml";
+        public static string XML_PATH = Program.PROJECT_DIR + @"\..\..\xml3.sql";
 
-        public static IEnumerable<(int, string)> Parse(IEnumerable<ArtistXMLItem> items)
+        public static IEnumerable<string> Parse(IEnumerable<ArtistXMLItem> items)
         {
             var artists = items.GroupBy(x => x.artistid);
             var xmls = artists.Select(g =>
@@ -45,13 +45,21 @@ namespace XML_GENERATION.Parsers
                     xmlStringBuilder.AppendLine($"</Album>");
                     return xmlStringBuilder.ToString();
                 });
+
                 foreach (var album in albums)
                 {
                     xml.AppendLine(album);
                 }
                 xml.AppendLine("</Albums>");
-                return (g.Key, xml.ToString());
+
+
+                var template = $@"UPDATE ARTIST SET ALBUMS_XML = q'[{xml.ToString().Replace("'", "''")}]' WHERE ARTISTID = {g.Key};";
+
+                return template;
             });
+
+            xmls = xmls.Append("commit; \r\n").Append("exit;");
+            xmls = xmls.Prepend("SET SQLBLANKLINES ON;");
             return xmls;
         }
     }

@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF - 8"?>
+SET SQLBLANKLINES ON;
+set define off
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="1">
 <Title>For Those About To Rock We Salute You</Title>
@@ -20,7 +22,7 @@
 </Track>
 
 <Track id="7">
-<Name>Let's Get It Up</Name>
+<Name>Let''s Get It Up</Name>
 <Composer>Angus Young, Malcolm Young, Brian Johnson</Composer>
 <Milliseconds>233926</Milliseconds>
 <Bytes>7636561</Bytes>
@@ -130,7 +132,7 @@
 </Track>
 
 <Track id="21">
-<Name>Hell Ain't A Bad Place To Be</Name>
+<Name>Hell Ain''t A Bad Place To Be</Name>
 <Composer>AC/DC</Composer>
 <Milliseconds>254380</Milliseconds>
 <Bytes>8331286</Bytes>
@@ -157,8 +159,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 1;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="2">
 <Title>Balls to the Wall</Title>
@@ -205,8 +207,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 2;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="5">
 <Title>Big Ones</Title>
@@ -220,7 +222,7 @@
 </Track>
 
 <Track id="37">
-<Name>Livin' On The Edge</Name>
+<Name>Livin'' On The Edge</Name>
 <Composer>Steven Tyler, Joe Perry, Mark Hudson</Composer>
 <Milliseconds>381231</Milliseconds>
 <Bytes>12374569</Bytes>
@@ -252,7 +254,7 @@
 </Track>
 
 <Track id="28">
-<Name>Janie's Got A Gun</Name>
+<Name>Janie''s Got A Gun</Name>
 <Composer>Steven Tyler, Tom Hamilton</Composer>
 <Milliseconds>330736</Milliseconds>
 <Bytes>10869391</Bytes>
@@ -260,7 +262,7 @@
 </Track>
 
 <Track id="29">
-<Name>Cryin'</Name>
+<Name>Cryin''</Name>
 <Composer>Steven Tyler, Joe Perry, Taylor Rhodes</Composer>
 <Milliseconds>309263</Milliseconds>
 <Bytes>10056995</Bytes>
@@ -335,8 +337,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 3;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="6">
 <Title>Jagged Little Pill</Title>
@@ -449,8 +451,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 4;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="7">
 <Title>Facelift</Title>
@@ -488,7 +490,7 @@
 </Track>
 
 <Track id="55">
-<Name>I Can't Remember</Name>
+<Name>I Can''t Remember</Name>
 <Composer>Jerry Cantrell, Layne Staley</Composer>
 <Milliseconds>222955</Milliseconds>
 <Bytes>7302550</Bytes>
@@ -504,7 +506,7 @@
 </Track>
 
 <Track id="57">
-<Name>It Ain't Like That</Name>
+<Name>It Ain''t Like That</Name>
 <Composer>Jerry Cantrell, Michael Starr, Sean Kinney</Composer>
 <Milliseconds>277577</Milliseconds>
 <Bytes>8993793</Bytes>
@@ -555,8 +557,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 5;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="8">
 <Title>Warner 25 Anos</Title>
@@ -819,8 +821,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 6;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="9">
 <Title>Plays Metallica By Four Cellos</Title>
@@ -893,8 +895,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 7;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="10">
 <Title>Audioslave</Title>
@@ -980,7 +982,7 @@
 </Track>
 
 <Track id="95">
-<Name>Bring'em Back Alive</Name>
+<Name>Bring''em Back Alive</Name>
 <Composer>Audioslave/Chris Cornell</Composer>
 <Milliseconds>329534</Milliseconds>
 <Bytes>7911634</Bytes>
@@ -1042,7 +1044,7 @@
 </Track>
 
 <Track id="102">
-<Name>Doesn't Remind Me</Name>
+<Name>Doesn''t Remind Me</Name>
 <Composer>Cornell, Commerford, Morello, Wilk</Composer>
 <Milliseconds>255869</Milliseconds>
 <Bytes>8357387</Bytes>
@@ -1106,7 +1108,7 @@
 </Track>
 
 <Track id="104">
-<Name>Heaven's Dead</Name>
+<Name>Heaven''s Dead</Name>
 <Composer>Cornell, Commerford, Morello, Wilk</Composer>
 <Milliseconds>276688</Milliseconds>
 <Bytes>9006158</Bytes>
@@ -1235,8 +1237,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 8;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="12">
 <Title>BackBeat Soundtrack</Title>
@@ -1290,7 +1292,7 @@
 </Track>
 
 <Track id="117">
-<Name>Rock 'N' Roll Music</Name>
+<Name>Rock ''N'' Roll Music</Name>
 <Composer>Chuck Berry</Composer>
 <Milliseconds>141923</Milliseconds>
 <Bytes>2276788</Bytes>
@@ -1330,7 +1332,7 @@
 </Track>
 
 <Track id="116">
-<Name>C'Mon Everybody</Name>
+<Name>C''Mon Everybody</Name>
 <Composer>Eddie Cochran/Jerry Capehart</Composer>
 <Milliseconds>140199</Milliseconds>
 <Bytes>2247846</Bytes>
@@ -1341,8 +1343,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 9;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="13">
 <Title>The Best Of Billy Cobham</Title>
@@ -1356,7 +1358,7 @@
 </Track>
 
 <Track id="124">
-<Name>Snoopy's search-Red baron</Name>
+<Name>Snoopy''s search-Red baron</Name>
 <Composer>Billy Cobham</Composer>
 <Milliseconds>456071</Milliseconds>
 <Bytes>15075616</Bytes>
@@ -1415,8 +1417,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 10;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="14">
 <Title>Alcohol Fueled Brewtality Live! [Disc 1]</Title>
@@ -1575,8 +1577,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 11;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="16">
 <Title>Black Sabbath</Title>
@@ -1652,7 +1654,7 @@
 </Track>
 
 <Track id="157">
-<Name>Tomorrow's Dream</Name>
+<Name>Tomorrow''s Dream</Name>
 <Composer>Tony Iommi, Bill Ward, Geezer Butler, Ozzy Osbourne</Composer>
 <Milliseconds>192496</Milliseconds>
 <Bytes>6252071</Bytes>
@@ -1727,8 +1729,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 12;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="18">
 <Title>Body Count</Title>
@@ -1854,7 +1856,7 @@
 </Track>
 
 <Track id="181">
-<Name>Momma's Gotta Die Tonight</Name>
+<Name>Momma''s Gotta Die Tonight</Name>
 <Composer></Composer>
 <Milliseconds>371539</Milliseconds>
 <Bytes>12122946</Bytes>
@@ -1862,7 +1864,7 @@
 </Track>
 
 <Track id="167">
-<Name>Body Count's In The House</Name>
+<Name>Body Count''s In The House</Name>
 <Composer></Composer>
 <Milliseconds>204251</Milliseconds>
 <Bytes>6715413</Bytes>
@@ -1873,8 +1875,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 13;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="19">
 <Title>Chemical Wedding</Title>
@@ -1971,8 +1973,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 14;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="20">
 <Title>The Best Of Buddy Guy - The Millenium Collection</Title>
@@ -2018,7 +2020,7 @@
 </Track>
 
 <Track id="204">
-<Name>Talkin' 'Bout Women Obviously</Name>
+<Name>Talkin'' ''Bout Women Obviously</Name>
 <Composer>Amos Blakemore/Buddy Guy</Composer>
 <Milliseconds>589531</Milliseconds>
 <Bytes>19161377</Bytes>
@@ -2069,8 +2071,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 15;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="21">
 <Title>Prenda Minha</Title>
@@ -2234,7 +2236,7 @@
 </Track>
 
 <Track id="225">
-<Name>Sozinho (Ca?drum 'n' Bass)</Name>
+<Name>Sozinho (Ca?drum ''n'' Bass)</Name>
 <Composer></Composer>
 <Milliseconds>328071</Milliseconds>
 <Bytes>10975007</Bytes>
@@ -2253,8 +2255,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 16;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="23">
 <Title>Minha Historia</Title>
@@ -2516,7 +2518,7 @@
 </Track>
 
 <Track id="244">
-<Name>Gota D'�gua</Name>
+<Name>Gota D''�gua</Name>
 <Composer></Composer>
 <Milliseconds>153208</Milliseconds>
 <Bytes>5074189</Bytes>
@@ -2535,8 +2537,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 17;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="24">
 <Title>Afrociberdelia</Title>
@@ -2839,8 +2841,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 18;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="26">
 <Title>Ac�stico MTV [Live]</Title>
@@ -3103,8 +3105,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 19;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="28">
 <Title>Na Pista</Title>
@@ -3193,8 +3195,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 20;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="29">
 <Title>Ax� Bahia 2001</Title>
@@ -3453,7 +3455,7 @@
 
 <Track id="562">
 <Name>Mangueira</Name>
-<Composer>Bizuca/Cl�vis P?/Gilson Bernini/Marelo D'Aguia</Composer>
+<Composer>Bizuca/Cl�vis P?/Gilson Bernini/Marelo D''Aguia</Composer>
 <Milliseconds>298318</Milliseconds>
 <Bytes>9999506</Bytes>
 <Unitprice>.99</Unitprice>
@@ -3669,8 +3671,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 21;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="30">
 <Title>BBC Sessions [Disc 1] [Live]</Title>
@@ -3684,7 +3686,7 @@
 </Track>
 
 <Track id="338">
-<Name>I Can't Quit You Baby</Name>
+<Name>I Can''t Quit You Baby</Name>
 <Composer>Willie Dixon</Composer>
 <Milliseconds>263836</Milliseconds>
 <Bytes>8581414</Bytes>
@@ -3748,7 +3750,7 @@
 </Track>
 
 <Track id="346">
-<Name>Somethin' Else</Name>
+<Name>Somethin'' Else</Name>
 <Composer>Bob Cochran/Sharon Sheeley</Composer>
 <Milliseconds>127869</Milliseconds>
 <Bytes>4165650</Bytes>
@@ -3764,7 +3766,7 @@
 </Track>
 
 <Track id="348">
-<Name>I Can't Quit You Baby(2)</Name>
+<Name>I Can''t Quit You Baby(2)</Name>
 <Composer>Willie Dixon</Composer>
 <Milliseconds>380551</Milliseconds>
 <Bytes>12377615</Bytes>
@@ -3864,7 +3866,7 @@
 </Track>
 
 <Track id="1579">
-<Name>Since I've Been Loving You</Name>
+<Name>Since I''ve Been Loving You</Name>
 <Composer>John Paul Jones/Robert Plant</Composer>
 <Milliseconds>416365</Milliseconds>
 <Bytes>13471959</Bytes>
@@ -3904,7 +3906,7 @@
 </Track>
 
 <Track id="1584">
-<Name>That's The Way</Name>
+<Name>That''s The Way</Name>
 <Composer>Robert Plant</Composer>
 <Milliseconds>343431</Milliseconds>
 <Bytes>11248455</Bytes>
@@ -3934,7 +3936,7 @@
 <Title>Coda</Title>
 <Tracks>
 <Track id="1587">
-<Name>We're Gonna Groove</Name>
+<Name>We''re Gonna Groove</Name>
 <Composer>Ben E.King/James Bethea</Composer>
 <Milliseconds>157570</Milliseconds>
 <Bytes>5180975</Bytes>
@@ -3950,7 +3952,7 @@
 </Track>
 
 <Track id="1589">
-<Name>I Can't Quit You Baby</Name>
+<Name>I Can''t Quit You Baby</Name>
 <Composer>Willie Dixon</Composer>
 <Milliseconds>258168</Milliseconds>
 <Bytes>8437098</Bytes>
@@ -3958,7 +3960,7 @@
 </Track>
 
 <Track id="1590">
-<Name>Walter's Walk</Name>
+<Name>Walter''s Walk</Name>
 <Composer>Jimmy Page, Robert Plant</Composer>
 <Milliseconds>270785</Milliseconds>
 <Bytes>8712499</Bytes>
@@ -3982,7 +3984,7 @@
 </Track>
 
 <Track id="1593">
-<Name>Bonzo's Montreux</Name>
+<Name>Bonzo''s Montreux</Name>
 <Composer>John Bonham</Composer>
 <Milliseconds>258925</Milliseconds>
 <Bytes>8557447</Bytes>
@@ -4044,7 +4046,7 @@
 </Track>
 
 <Track id="1600">
-<Name>D'Yer Mak'er</Name>
+<Name>D''Yer Mak''er</Name>
 <Composer>John Bonham/John Paul Jones</Composer>
 <Milliseconds>262948</Milliseconds>
 <Bytes>8645935</Bytes>
@@ -4122,7 +4124,7 @@
 </Track>
 
 <Track id="1609">
-<Name>I'm Gonna Crawl</Name>
+<Name>I''m Gonna Crawl</Name>
 <Composer>Jimmy Page, Robert Plant & John Paul Jones</Composer>
 <Milliseconds>329639</Milliseconds>
 <Bytes>10737665</Bytes>
@@ -4214,7 +4216,7 @@
 </Track>
 
 <Track id="1619">
-<Name>Babe I'm Gonna Leave You</Name>
+<Name>Babe I''m Gonna Leave You</Name>
 <Composer>Jimmy Page/Robert Plant</Composer>
 <Milliseconds>401475</Milliseconds>
 <Bytes>13189312</Bytes>
@@ -4262,7 +4264,7 @@
 </Track>
 
 <Track id="1625">
-<Name>I Can't Quit You Baby</Name>
+<Name>I Can''t Quit You Baby</Name>
 <Composer>Willie Dixon</Composer>
 <Milliseconds>282671</Milliseconds>
 <Bytes>9252733</Bytes>
@@ -4324,7 +4326,7 @@
 </Track>
 
 <Track id="1632">
-<Name>Living Loving Maid (She's Just A Woman)</Name>
+<Name>Living Loving Maid (She''s Just A Woman)</Name>
 <Composer>Jimmy Page, Robert Plant</Composer>
 <Milliseconds>159216</Milliseconds>
 <Bytes>5219819</Bytes>
@@ -4386,7 +4388,7 @@
 </Track>
 
 <Track id="1639">
-<Name>Since I've Been Loving You</Name>
+<Name>Since I''ve Been Loving You</Name>
 <Composer>Jimmy Page, Robert Plant, John Paul Jones</Composer>
 <Milliseconds>444055</Milliseconds>
 <Bytes>14482460</Bytes>
@@ -4418,7 +4420,7 @@
 </Track>
 
 <Track id="1643">
-<Name>That's The Way</Name>
+<Name>That''s The Way</Name>
 <Composer>Jimmy Page, Robert Plant</Composer>
 <Milliseconds>337345</Milliseconds>
 <Bytes>11202499</Bytes>
@@ -4550,7 +4552,7 @@
 </Track>
 
 <Track id="1658">
-<Name>Nobody's Fault But Mine</Name>
+<Name>Nobody''s Fault But Mine</Name>
 <Composer>Jimmy Page/Robert Plant</Composer>
 <Milliseconds>376215</Milliseconds>
 <Bytes>12237859</Bytes>
@@ -4669,8 +4671,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 22;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="31">
 <Title>Bongo Fury</Title>
@@ -4700,7 +4702,7 @@
 </Track>
 
 <Track id="354">
-<Name>Poofter's Froth Wyoming Plans Ahead</Name>
+<Name>Poofter''s Froth Wyoming Plans Ahead</Name>
 <Composer>Frank Zappa</Composer>
 <Milliseconds>183902</Milliseconds>
 <Bytes>6007019</Bytes>
@@ -4751,8 +4753,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 23;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="33">
 <Title>Chill: Brazil (Disc 1)</Title>
@@ -4897,8 +4899,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 24;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="35">
 <Title>Garage Inc. (Disc 1)</Title>
@@ -4912,7 +4914,7 @@
 </Track>
 
 <Track id="409">
-<Name>It's Electric</Name>
+<Name>It''s Electric</Name>
 <Composer>Harris/Tatler</Composer>
 <Milliseconds>213995</Milliseconds>
 <Bytes>6978601</Bytes>
@@ -4976,7 +4978,7 @@
 </Track>
 
 <Track id="417">
-<Name>Tuesday's Gone</Name>
+<Name>Tuesday''s Gone</Name>
 <Composer>Collins/Van Zandt</Composer>
 <Milliseconds>545750</Milliseconds>
 <Bytes>17900787</Bytes>
@@ -5038,7 +5040,7 @@
 </Track>
 
 <Track id="1806">
-<Name>Don't Tread On Me</Name>
+<Name>Don''t Tread On Me</Name>
 <Composer>Ulrich</Composer>
 <Milliseconds>240483</Milliseconds>
 <Bytes>7827907</Bytes>
@@ -5231,7 +5233,7 @@
 </Album>
 
 <Album id="150">
-<Title>Kill 'Em All</Title>
+<Title>Kill ''Em All</Title>
 <Tracks>
 <Track id="1829">
 <Name>Hit The Lights</Name>
@@ -5368,7 +5370,7 @@
 </Track>
 
 <Track id="1839">
-<Name>Ain't My Bitch</Name>
+<Name>Ain''t My Bitch</Name>
 <Composer>James Hetfield, Lars Ulrich</Composer>
 <Milliseconds>304457</Milliseconds>
 <Bytes>9931015</Bytes>
@@ -5524,7 +5526,7 @@
 </Track>
 
 <Track id="1863">
-<Name>Devil's Dance</Name>
+<Name>Devil''s Dance</Name>
 <Composer>Hetfield, Ulrich</Composer>
 <Milliseconds>318955</Milliseconds>
 <Bytes>10414832</Bytes>
@@ -5588,7 +5590,7 @@
 </Track>
 
 <Track id="1871">
-<Name>Low Man's Lyric</Name>
+<Name>Low Man''s Lyric</Name>
 <Composer>Hetfield, Ulrich</Composer>
 <Milliseconds>457639</Milliseconds>
 <Bytes>14855583</Bytes>
@@ -5857,8 +5859,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 50;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="36">
 <Title>Greatest Hits II</Title>
@@ -5912,7 +5914,7 @@
 </Track>
 
 <Track id="425">
-<Name>It's A Hard Life</Name>
+<Name>It''s A Hard Life</Name>
 <Composer>Freddie Mercury</Composer>
 <Milliseconds>249417</Milliseconds>
 <Bytes>8112242</Bytes>
@@ -5952,7 +5954,7 @@
 </Track>
 
 <Track id="430">
-<Name>I'm Going Slightly Mad</Name>
+<Name>I''m Going Slightly Mad</Name>
 <Composer>Queen</Composer>
 <Milliseconds>248032</Milliseconds>
 <Bytes>8192339</Bytes>
@@ -6046,7 +6048,7 @@
 </Track>
 
 <Track id="2259">
-<Name>You're My Best Friend</Name>
+<Name>You''re My Best Friend</Name>
 <Composer>Deacon, John</Composer>
 <Milliseconds>172225</Milliseconds>
 <Bytes>5602173</Bytes>
@@ -6054,7 +6056,7 @@
 </Track>
 
 <Track id="2260">
-<Name>Don't Stop Me Now</Name>
+<Name>Don''t Stop Me Now</Name>
 <Composer>Mercury, Freddie</Composer>
 <Milliseconds>211826</Milliseconds>
 <Bytes>6896666</Bytes>
@@ -6086,7 +6088,7 @@
 </Track>
 
 <Track id="2264">
-<Name>Now I'm Here</Name>
+<Name>Now I''m Here</Name>
 <Composer>May, Brian</Composer>
 <Milliseconds>255346</Milliseconds>
 <Bytes>8328312</Bytes>
@@ -6220,7 +6222,7 @@
 </Track>
 
 <Track id="2280">
-<Name>It's Late</Name>
+<Name>It''s Late</Name>
 <Composer>May</Composer>
 <Milliseconds>386194</Milliseconds>
 <Bytes>12519388</Bytes>
@@ -6239,14 +6241,14 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 51;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="37">
 <Title>Greatest Kiss</Title>
 <Tracks>
 <Track id="442">
-<Name>Goin' Blind</Name>
+<Name>Goin'' Blind</Name>
 <Composer>Gene Simmons, S. Coronel</Composer>
 <Milliseconds>216215</Milliseconds>
 <Bytes>7045314</Bytes>
@@ -6350,7 +6352,7 @@
 </Track>
 
 <Track id="455">
-<Name>God Gave Rock 'n' Roll To You</Name>
+<Name>God Gave Rock ''n'' Roll To You</Name>
 <Composer>Paul Stanley, Gene Simmons, Rus Ballard, Bob Ezrin</Composer>
 <Milliseconds>320444</Milliseconds>
 <Bytes>10441590</Bytes>
@@ -6412,7 +6414,7 @@
 <Title>Unplugged [Live]</Title>
 <Tracks>
 <Track id="1562">
-<Name>Comin' Home</Name>
+<Name>Comin'' Home</Name>
 <Composer>Paul Stanley, Ace Frehley</Composer>
 <Milliseconds>172068</Milliseconds>
 <Bytes>5661120</Bytes>
@@ -6428,7 +6430,7 @@
 </Track>
 
 <Track id="1564">
-<Name>Goin' Blind</Name>
+<Name>Goin'' Blind</Name>
 <Composer>Gene Simmons, Stephen Coronel</Composer>
 <Milliseconds>217652</Milliseconds>
 <Bytes>7167523</Bytes>
@@ -6516,7 +6518,7 @@
 </Track>
 
 <Track id="1575">
-<Name>Nothin' To Lose</Name>
+<Name>Nothin'' To Lose</Name>
 <Composer>Gene Simmons</Composer>
 <Milliseconds>222354</Milliseconds>
 <Bytes>7351460</Bytes>
@@ -6535,8 +6537,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 52;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="38">
 <Title>Heart of the Night</Title>
@@ -6590,7 +6592,7 @@
 </Track>
 
 <Track id="462">
-<Name>Valentino's</Name>
+<Name>Valentino''s</Name>
 <Composer></Composer>
 <Milliseconds>296124</Milliseconds>
 <Bytes>9848545</Bytes>
@@ -6700,7 +6702,7 @@
 </Track>
 
 <Track id="2529">
-<Name>It Doesn't Matter</Name>
+<Name>It Doesn''t Matter</Name>
 <Composer>Chet Catallo</Composer>
 <Milliseconds>270027</Milliseconds>
 <Bytes>9034177</Bytes>
@@ -6719,8 +6721,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 53;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="39">
 <Title>International Superhits</Title>
@@ -6766,7 +6768,7 @@
 </Track>
 
 <Track id="481">
-<Name>Hitchin' A Ride</Name>
+<Name>Hitchin'' A Ride</Name>
 <Composer>Billie Joe Armstrong -Words Green Day -Music</Composer>
 <Milliseconds>171546</Milliseconds>
 <Bytes>5616891</Bytes>
@@ -6822,7 +6824,7 @@
 </Track>
 
 <Track id="488">
-<Name>Macy's Day Parade</Name>
+<Name>Macy''s Day Parade</Name>
 <Composer>Billie Joe Armstrong -Words Green Day -Music</Composer>
 <Milliseconds>213420</Milliseconds>
 <Bytes>7075573</Bytes>
@@ -6908,7 +6910,7 @@
 </Track>
 
 <Track id="1134">
-<Name>Jesus Of Suburbia / City Of The Damned / I Don't Care / Dearly Beloved / Tales Of Another Broken Home</Name>
+<Name>Jesus Of Suburbia / City Of The Damned / I Don''t Care / Dearly Beloved / Tales Of Another Broken Home</Name>
 <Composer>Billie Joe Armstrong/Green Day</Composer>
 <Milliseconds>548336</Milliseconds>
 <Bytes>17875209</Bytes>
@@ -6956,7 +6958,7 @@
 </Track>
 
 <Track id="1140">
-<Name>She's A Rebel</Name>
+<Name>She''s A Rebel</Name>
 <Composer>Green Day</Composer>
 <Milliseconds>120528</Milliseconds>
 <Bytes>3901226</Bytes>
@@ -6988,7 +6990,7 @@
 </Track>
 
 <Track id="1144">
-<Name>Homecoming / The Death Of St. Jimmy / East 12th St. / Nobody Likes You / Rock And Roll Girlfriend / We're Coming Home Again</Name>
+<Name>Homecoming / The Death Of St. Jimmy / East 12th St. / Nobody Likes You / Rock And Roll Girlfriend / We''re Coming Home Again</Name>
 <Composer>Mike Dirnt/Tr� Cool</Composer>
 <Milliseconds>558602</Milliseconds>
 <Bytes>18139840</Bytes>
@@ -7007,8 +7009,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 54;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="40">
 <Title>Into The Light</Title>
@@ -7038,7 +7040,7 @@
 </Track>
 
 <Track id="492">
-<Name>Don't You Cry</Name>
+<Name>Don''t You Cry</Name>
 <Composer>David Coverdale</Composer>
 <Milliseconds>347036</Milliseconds>
 <Bytes>11269612</Bytes>
@@ -7094,7 +7096,7 @@
 </Track>
 
 <Track id="499">
-<Name>Don't Lie To Me</Name>
+<Name>Don''t Lie To Me</Name>
 <Composer>David Coverdale/Earl Slick</Composer>
 <Milliseconds>283585</Milliseconds>
 <Bytes>9288007</Bytes>
@@ -7113,8 +7115,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 55;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="41">
 <Title>Meus Momentos</Title>
@@ -7235,8 +7237,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 56;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="42">
 <Title>Minha Hist�ria</Title>
@@ -7357,8 +7359,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 57;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="43">
 <Title>MK III The Final Concerts [Disc 1]</Title>
@@ -7426,7 +7428,7 @@
 <Title>The Final Concerts (Disc 2)</Title>
 <Tracks>
 <Track id="620">
-<Name>Space Truckin'</Name>
+<Name>Space Truckin''</Name>
 <Composer>Blackmore/Gillan/Glover/Lord/Paice</Composer>
 <Milliseconds>1196094</Milliseconds>
 <Bytes>39267613</Bytes>
@@ -7464,7 +7466,7 @@
 <Title>Come Taste The Band</Title>
 <Tracks>
 <Track id="745">
-<Name>Comin' Home</Name>
+<Name>Comin'' Home</Name>
 <Composer>Bolin/Coverdale/Paice</Composer>
 <Milliseconds>235781</Milliseconds>
 <Bytes>7644604</Bytes>
@@ -7480,7 +7482,7 @@
 </Track>
 
 <Track id="747">
-<Name>Gettin' Tighter</Name>
+<Name>Gettin'' Tighter</Name>
 <Composer>Bolin/Hughes</Composer>
 <Milliseconds>218044</Milliseconds>
 <Bytes>7176909</Bytes>
@@ -7520,7 +7522,7 @@
 </Track>
 
 <Track id="752">
-<Name>This Time Around / Owed to 'G' [Instrumental]</Name>
+<Name>This Time Around / Owed to ''G'' [Instrumental]</Name>
 <Composer>Bolin/Hughes/Lord</Composer>
 <Milliseconds>370102</Milliseconds>
 <Bytes>11995679</Bytes>
@@ -7566,7 +7568,7 @@
 </Track>
 
 <Track id="760">
-<Name>Hard Lovin' Man</Name>
+<Name>Hard Lovin'' Man</Name>
 <Composer>Blackmore, Gillan, Glover, Lord, Paice</Composer>
 <Milliseconds>431203</Milliseconds>
 <Bytes>13931179</Bytes>
@@ -7652,7 +7654,7 @@
 </Track>
 
 <Track id="764">
-<Name>Anyone's Daughter</Name>
+<Name>Anyone''s Daughter</Name>
 <Composer>Ritchie Blackmore, Ian Gillan, Roger Glover, Jon Lord, Ian Paice</Composer>
 <Milliseconds>284682</Milliseconds>
 <Bytes>9354480</Bytes>
@@ -7663,7 +7665,7 @@
 </Album>
 
 <Album id="61">
-<Title>Knocking at Your Back Door: The Best Of Deep Purple in the 80's</Title>
+<Title>Knocking at Your Back Door: The Best Of Deep Purple in the 80''s</Title>
 <Tracks>
 <Track id="768">
 <Name>Knocking At Your Back Door</Name>
@@ -7690,7 +7692,7 @@
 </Track>
 
 <Track id="771">
-<Name>Nobody's Home</Name>
+<Name>Nobody''s Home</Name>
 <Composer>Richie Blackmore, Ian Gillian, Roger Glover, Jon Lord, Ian Paice</Composer>
 <Milliseconds>243017</Milliseconds>
 <Bytes>7929493</Bytes>
@@ -7768,7 +7770,7 @@
 </Track>
 
 <Track id="780">
-<Name>Maybe I'm A Leo</Name>
+<Name>Maybe I''m A Leo</Name>
 <Composer>Ian Gillan/Ian Paice/Jon Lord/Ritchie Blckmore/Roger Glover</Composer>
 <Milliseconds>290455</Milliseconds>
 <Bytes>9502646</Bytes>
@@ -7784,7 +7786,7 @@
 </Track>
 
 <Track id="785">
-<Name>Space Truckin'</Name>
+<Name>Space Truckin''</Name>
 <Composer>Ian Gillan/Ian Paice/Jon Lord/Ritchie Blckmore/Roger Glover</Composer>
 <Milliseconds>272796</Milliseconds>
 <Bytes>8981030</Bytes>
@@ -7854,7 +7856,7 @@
 </Track>
 
 <Track id="790">
-<Name>Cascades : I'm Not Your Lover</Name>
+<Name>Cascades : I''m Not Your Lover</Name>
 <Composer>Ian Gillan, Roger Glover, Jon Lord, Steve Morse, Ian Paice</Composer>
 <Milliseconds>283689</Milliseconds>
 <Bytes>9209693</Bytes>
@@ -7870,7 +7872,7 @@
 </Track>
 
 <Track id="792">
-<Name>Rosa's Cantina</Name>
+<Name>Rosa''s Cantina</Name>
 <Composer>Ian Gillan, Roger Glover, Jon Lord, Steve Morse, Ian Paice</Composer>
 <Milliseconds>312372</Milliseconds>
 <Bytes>10323804</Bytes>
@@ -8010,7 +8012,7 @@
 </Track>
 
 <Track id="808">
-<Name>Love Don't Mean a Thing</Name>
+<Name>Love Don''t Mean a Thing</Name>
 <Composer>D.Coverdale/G.Hughes/Glenn Hughes/I.Paice/Ian Paice/J.Lord/John Lord/R.Blackmore/Ritchie Blackmore</Composer>
 <Milliseconds>263862</Milliseconds>
 <Bytes>8675026</Bytes>
@@ -8042,7 +8044,7 @@
 </Track>
 
 <Track id="812">
-<Name>You Can't Do it Right (With the One You Love)</Name>
+<Name>You Can''t Do it Right (With the One You Love)</Name>
 <Composer>D.Coverdale/G.Hughes/Glenn Hughes/R.Blackmore/Ritchie Blackmore</Composer>
 <Milliseconds>203755</Milliseconds>
 <Bytes>6709579</Bytes>
@@ -8112,7 +8114,7 @@
 </Track>
 
 <Track id="825">
-<Name>One Man's Meat</Name>
+<Name>One Man''s Meat</Name>
 <Composer>roger glover</Composer>
 <Milliseconds>278804</Milliseconds>
 <Bytes>9068960</Bytes>
@@ -8163,8 +8165,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 58;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="46">
 <Title>Supernatural</Title>
@@ -8358,7 +8360,7 @@
 </Track>
 
 <Track id="2429">
-<Name>We've Got To Get Together/Jingo</Name>
+<Name>We''ve Got To Get Together/Jingo</Name>
 <Composer></Composer>
 <Milliseconds>1070027</Milliseconds>
 <Bytes>34618222</Bytes>
@@ -8374,7 +8376,7 @@
 </Track>
 
 <Track id="2431">
-<Name>Just Ain't Good Enough</Name>
+<Name>Just Ain''t Good Enough</Name>
 <Composer></Composer>
 <Milliseconds>850259</Milliseconds>
 <Bytes>27489067</Bytes>
@@ -8401,8 +8403,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 59;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="47">
 <Title>The Best of Ed Motta</Title>
@@ -8523,14 +8525,14 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 37;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="48">
 <Title>The Essential Miles Davis [Disc 1]</Title>
 <Tracks>
 <Track id="597">
-<Name>Now's The Time</Name>
+<Name>Now''s The Time</Name>
 <Composer>Miles Davis</Composer>
 <Milliseconds>197459</Milliseconds>
 <Bytes>6358868</Bytes>
@@ -8562,7 +8564,7 @@
 </Track>
 
 <Track id="601">
-<Name>Walkin'</Name>
+<Name>Walkin''</Name>
 <Composer>Miles Davis</Composer>
 <Milliseconds>807392</Milliseconds>
 <Bytes>26411634</Bytes>
@@ -8570,7 +8572,7 @@
 </Track>
 
 <Track id="602">
-<Name>'Round Midnight</Name>
+<Name>''Round Midnight</Name>
 <Composer>Miles Davis</Composer>
 <Milliseconds>357459</Milliseconds>
 <Bytes>11590284</Bytes>
@@ -8798,7 +8800,7 @@
 </Track>
 
 <Track id="1911">
-<Name>I Don't Wanna Be Kissed (By Anyone But You)</Name>
+<Name>I Don''t Wanna Be Kissed (By Anyone But You)</Name>
 <Composer>H. Spina, J. Elliott</Composer>
 <Milliseconds>191320</Milliseconds>
 <Bytes>6219487</Bytes>
@@ -8830,7 +8832,7 @@
 </Track>
 
 <Track id="1915">
-<Name>I Don't Wanna Be Kissed (By Anyone But You) (Alternate Take)</Name>
+<Name>I Don''t Wanna Be Kissed (By Anyone But You) (Alternate Take)</Name>
 <Composer>H. Spina, J. Elliott</Composer>
 <Milliseconds>192078</Milliseconds>
 <Bytes>6254796</Bytes>
@@ -8841,11 +8843,11 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 68;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="51">
-<Title>Up An' Atom</Title>
+<Title>Up An'' Atom</Title>
 <Tracks>
 <Track id="624">
 <Name>Jeepers Creepers</Name>
@@ -8920,7 +8922,7 @@
 </Track>
 
 <Track id="633">
-<Name>Up An' Atom</Name>
+<Name>Up An'' Atom</Name>
 <Composer></Composer>
 <Milliseconds>179565</Milliseconds>
 <Bytes>5822645</Bytes>
@@ -8968,7 +8970,7 @@
 </Track>
 
 <Track id="639">
-<Name>Don't Take Your Love From Me</Name>
+<Name>Don''t Take Your Love From Me</Name>
 <Composer></Composer>
 <Milliseconds>282331</Milliseconds>
 <Bytes>9244238</Bytes>
@@ -8984,7 +8986,7 @@
 </Track>
 
 <Track id="641">
-<Name>I'm Coming Virginia</Name>
+<Name>I''m Coming Virginia</Name>
 <Composer></Composer>
 <Milliseconds>280163</Milliseconds>
 <Bytes>9209827</Bytes>
@@ -8992,7 +8994,7 @@
 </Track>
 
 <Track id="642">
-<Name>Payin' Them Dues Blues</Name>
+<Name>Payin'' Them Dues Blues</Name>
 <Composer></Composer>
 <Milliseconds>198556</Milliseconds>
 <Bytes>6536918</Bytes>
@@ -9027,8 +9029,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 69;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="52">
 <Title>Vin�cius De Moraes - Sem Limite</Title>
@@ -9157,8 +9159,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 70;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="54">
 <Title>Chronicle, Vol. 1</Title>
@@ -9236,7 +9238,7 @@
 </Track>
 
 <Track id="684">
-<Name>Travelin' Band</Name>
+<Name>Travelin'' Band</Name>
 <Composer>J. C. Fogerty</Composer>
 <Milliseconds>129358</Milliseconds>
 <Bytes>4270414</Bytes>
@@ -9244,7 +9246,7 @@
 </Track>
 
 <Track id="685">
-<Name>Who'll Stop The Rain</Name>
+<Name>Who''ll Stop The Rain</Name>
 <Composer>J. C. Fogerty</Composer>
 <Milliseconds>149394</Milliseconds>
 <Bytes>4899579</Bytes>
@@ -9268,7 +9270,7 @@
 </Track>
 
 <Track id="688">
-<Name>Lookin' Out My Back Door</Name>
+<Name>Lookin'' Out My Back Door</Name>
 <Composer>J. C. Fogerty</Composer>
 <Milliseconds>152946</Milliseconds>
 <Bytes>5034670</Bytes>
@@ -9402,7 +9404,7 @@
 </Track>
 
 <Track id="704">
-<Name>Don't Look Now</Name>
+<Name>Don''t Look Now</Name>
 <Composer>J.C. Fogerty</Composer>
 <Milliseconds>131918</Milliseconds>
 <Bytes>4366455</Bytes>
@@ -9450,7 +9452,7 @@
 </Track>
 
 <Track id="710">
-<Name>It's Just A Thought</Name>
+<Name>It''s Just A Thought</Name>
 <Composer>J.C. Fogerty</Composer>
 <Milliseconds>237374</Milliseconds>
 <Bytes>7778319</Bytes>
@@ -9474,7 +9476,7 @@
 </Track>
 
 <Track id="713">
-<Name>Lookin' For A Reason</Name>
+<Name>Lookin'' For A Reason</Name>
 <Composer>J.C. Fogerty</Composer>
 <Milliseconds>209789</Milliseconds>
 <Bytes>6933135</Bytes>
@@ -9493,8 +9495,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 76;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="56">
 <Title>C�ssia Eller - Cole�?o Sem Limite [Disc 2]</Title>
@@ -9749,11 +9751,11 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 77;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="67">
-<Title>Vault: Def Leppard's Greatest Hits</Title>
+<Title>Vault: Def Leppard''s Greatest Hits</Title>
 <Tracks>
 <Track id="826">
 <Name>Pour Some Sugar On Me</Name>
@@ -9764,7 +9766,7 @@
 </Track>
 
 <Track id="841">
-<Name>Bringin' On The Heartbreak</Name>
+<Name>Bringin'' On The Heartbreak</Name>
 <Composer></Composer>
 <Milliseconds>272457</Milliseconds>
 <Bytes>8853324</Bytes>
@@ -9780,7 +9782,7 @@
 </Track>
 
 <Track id="829">
-<Name>Let's Get Rocked</Name>
+<Name>Let''s Get Rocked</Name>
 <Composer></Composer>
 <Milliseconds>296019</Milliseconds>
 <Bytes>9724150</Bytes>
@@ -9887,8 +9889,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 78;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="68">
 <Title>Outbreak</Title>
@@ -9969,8 +9971,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 79;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="69">
 <Title>Djavan Ao Vivo - Vol. 02</Title>
@@ -10193,8 +10195,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 80;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="71">
 <Title>Elis Regina-Minha Hist�ria</Title>
@@ -10315,8 +10317,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 41;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="72">
 <Title>The Cream Of Clapton</Title>
@@ -10330,7 +10332,7 @@
 </Track>
 
 <Track id="908">
-<Name>I Can't Stand It</Name>
+<Name>I Can''t Stand It</Name>
 <Composer>Clapton</Composer>
 <Milliseconds>249730</Milliseconds>
 <Bytes>8271980</Bytes>
@@ -10576,7 +10578,7 @@
 </Track>
 
 <Track id="914">
-<Name>Nobody Knows You When You're Down & Out</Name>
+<Name>Nobody Knows You When You''re Down & Out</Name>
 <Composer>Jimmy Cox</Composer>
 <Milliseconds>231836</Milliseconds>
 <Bytes>7669922</Bytes>
@@ -10600,7 +10602,7 @@
 </Track>
 
 <Track id="917">
-<Name>Walkin' Blues</Name>
+<Name>Walkin'' Blues</Name>
 <Composer>Robert Johnson</Composer>
 <Milliseconds>226429</Milliseconds>
 <Bytes>7435192</Bytes>
@@ -10640,7 +10642,7 @@
 </Track>
 
 <Track id="922">
-<Name>Rollin' And Tumblin'</Name>
+<Name>Rollin'' And Tumblin''</Name>
 <Composer>McKinley Morgenfield (Muddy Waters)</Composer>
 <Milliseconds>251768</Milliseconds>
 <Bytes>8407355</Bytes>
@@ -10715,8 +10717,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 81;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="74">
 <Title>Album Of The Year</Title>
@@ -10864,7 +10866,7 @@
 </Track>
 
 <Track id="940">
-<Name>Everything's Ruined</Name>
+<Name>Everything''s Ruined</Name>
 <Composer></Composer>
 <Milliseconds>273658</Milliseconds>
 <Bytes>9010917</Bytes>
@@ -11076,7 +11078,7 @@
 </Track>
 
 <Track id="967">
-<Name>Surprise! You're Dead!</Name>
+<Name>Surprise! You''re Dead!</Name>
 <Composer>Faith No More</Composer>
 <Milliseconds>147226</Milliseconds>
 <Bytes>4823036</Bytes>
@@ -11159,8 +11161,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 82;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="78">
 <Title>Deixa Entrar</Title>
@@ -11281,8 +11283,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 83;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="79">
 <Title>In Your Honor [Disc 1]</Title>
@@ -11661,8 +11663,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 84;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="83">
 <Title>My Way: The Best Of Frank Sinatra [Disc 1]</Title>
@@ -11748,7 +11750,7 @@
 </Track>
 
 <Track id="1043">
-<Name>They Can't Take That Away From Me</Name>
+<Name>They Can''t Take That Away From Me</Name>
 <Composer>george gershwin/ira gershwin</Composer>
 <Milliseconds>161227</Milliseconds>
 <Bytes>5240043</Bytes>
@@ -11772,7 +11774,7 @@
 </Track>
 
 <Track id="1046">
-<Name>I've Got You Under My Skin</Name>
+<Name>I''ve Got You Under My Skin</Name>
 <Composer>cole porter</Composer>
 <Milliseconds>210808</Milliseconds>
 <Bytes>6883787</Bytes>
@@ -11804,7 +11806,7 @@
 </Track>
 
 <Track id="1050">
-<Name>That's Life</Name>
+<Name>That''s Life</Name>
 <Composer>dean kay thompson/kelly gordon</Composer>
 <Milliseconds>187010</Milliseconds>
 <Bytes>6095727</Bytes>
@@ -11863,8 +11865,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 85;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="84">
 <Title>Roda De Funk</Title>
@@ -12001,8 +12003,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 86;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="85">
 <Title>As Can�?es de Eu Tu Eles</Title>
@@ -12279,8 +12281,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 27;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="88">
 <Title>Faceless</Title>
@@ -12385,8 +12387,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 87;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="90">
 <Title>Appetite for Destruction</Title>
@@ -12400,7 +12402,7 @@
 </Track>
 
 <Track id="1147">
-<Name>It's So Easy</Name>
+<Name>It''s So Easy</Name>
 <Composer></Composer>
 <Milliseconds>202824</Milliseconds>
 <Bytes>3394019</Bytes>
@@ -12456,7 +12458,7 @@
 </Track>
 
 <Track id="1154">
-<Name>Sweet Child O' Mine</Name>
+<Name>Sweet Child O'' Mine</Name>
 <Composer></Composer>
 <Milliseconds>356424</Milliseconds>
 <Bytes>5879347</Bytes>
@@ -12464,7 +12466,7 @@
 </Track>
 
 <Track id="1155">
-<Name>You're Crazy</Name>
+<Name>You''re Crazy</Name>
 <Composer></Composer>
 <Milliseconds>197135</Milliseconds>
 <Bytes>3301971</Bytes>
@@ -12518,7 +12520,7 @@
 </Track>
 
 <Track id="1161">
-<Name>Don't Cry (Original)</Name>
+<Name>Don''t Cry (Original)</Name>
 <Composer></Composer>
 <Milliseconds>284744</Milliseconds>
 <Bytes>4833259</Bytes>
@@ -12534,7 +12536,7 @@
 </Track>
 
 <Track id="1163">
-<Name>You Ain't the First</Name>
+<Name>You Ain''t the First</Name>
 <Composer></Composer>
 <Milliseconds>156268</Milliseconds>
 <Bytes>2754414</Bytes>
@@ -12558,7 +12560,7 @@
 </Track>
 
 <Track id="1166">
-<Name>Double Talkin' Jive</Name>
+<Name>Double Talkin'' Jive</Name>
 <Composer></Composer>
 <Milliseconds>203637</Milliseconds>
 <Bytes>3520862</Bytes>
@@ -12590,7 +12592,7 @@
 </Track>
 
 <Track id="1170">
-<Name>Don't Damn Me</Name>
+<Name>Don''t Damn Me</Name>
 <Composer></Composer>
 <Milliseconds>318901</Milliseconds>
 <Bytes>5385886</Bytes>
@@ -12614,7 +12616,7 @@
 </Track>
 
 <Track id="1159">
-<Name>Dust N' Bones</Name>
+<Name>Dust N'' Bones</Name>
 <Composer></Composer>
 <Milliseconds>298374</Milliseconds>
 <Bytes>5053742</Bytes>
@@ -12637,7 +12639,7 @@
 
 <Track id="1175">
 <Name>14 Years</Name>
-<Composer>Izzy Stradlin'/W. Axl Rose</Composer>
+<Composer>Izzy Stradlin''/W. Axl Rose</Composer>
 <Milliseconds>261355</Milliseconds>
 <Bytes>8543664</Bytes>
 <Unitprice>.99</Unitprice>
@@ -12652,7 +12654,7 @@
 </Track>
 
 <Track id="1177">
-<Name>Knockin' On Heaven's Door</Name>
+<Name>Knockin'' On Heaven''s Door</Name>
 <Composer>Bob Dylan</Composer>
 <Milliseconds>336457</Milliseconds>
 <Bytes>10986716</Bytes>
@@ -12685,7 +12687,7 @@
 
 <Track id="1181">
 <Name>Pretty Tied Up</Name>
-<Composer>Izzy Stradlin'</Composer>
+<Composer>Izzy Stradlin''</Composer>
 <Milliseconds>287477</Milliseconds>
 <Bytes>9408754</Bytes>
 <Unitprice>.99</Unitprice>
@@ -12717,15 +12719,15 @@
 
 <Track id="1185">
 <Name>You Could Be Mine</Name>
-<Composer>Izzy Stradlin'/W. Axl Rose</Composer>
+<Composer>Izzy Stradlin''/W. Axl Rose</Composer>
 <Milliseconds>343875</Milliseconds>
 <Bytes>11207355</Bytes>
 <Unitprice>.99</Unitprice>
 </Track>
 
 <Track id="1186">
-<Name>Don't Cry</Name>
-<Composer>Izzy Stradlin'/W. Axl Rose</Composer>
+<Name>Don''t Cry</Name>
+<Composer>Izzy Stradlin''/W. Axl Rose</Composer>
 <Milliseconds>284238</Milliseconds>
 <Bytes>9222458</Bytes>
 <Unitprice>.99</Unitprice>
@@ -12743,8 +12745,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 88;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="93">
 <Title>Blue Moods</Title>
@@ -12782,7 +12784,7 @@
 </Track>
 
 <Track id="1192">
-<Name>L'Arc En Ciel De Miles</Name>
+<Name>L''Arc En Ciel De Miles</Name>
 <Composer>Kevin Robinson/Richard Bull</Composer>
 <Milliseconds>242390</Milliseconds>
 <Bytes>8053997</Bytes>
@@ -12822,7 +12824,7 @@
 </Track>
 
 <Track id="1197">
-<Name>Thinking 'Bout Tomorrow</Name>
+<Name>Thinking ''Bout Tomorrow</Name>
 <Composer>Fayyaz Virgi/Richard Bull</Composer>
 <Milliseconds>355395</Milliseconds>
 <Bytes>11865384</Bytes>
@@ -12830,7 +12832,7 @@
 </Track>
 
 <Track id="1198">
-<Name>Jacob's Ladder</Name>
+<Name>Jacob''s Ladder</Name>
 <Composer>Julian Crampton</Composer>
 <Milliseconds>367647</Milliseconds>
 <Bytes>12201595</Bytes>
@@ -12857,8 +12859,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 89;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="94">
 <Title>A Matter of Life and Death</Title>
@@ -12872,7 +12874,7 @@
 </Track>
 
 <Track id="1202">
-<Name>These Colours Don't Run</Name>
+<Name>These Colours Don''t Run</Name>
 <Composer></Composer>
 <Milliseconds>412152</Milliseconds>
 <Bytes>6883500</Bytes>
@@ -12983,7 +12985,7 @@
 
 <Track id="1216">
 <Name>Remember Tomorrow</Name>
-<Composer>Paul Di'Anno/Steve Harris</Composer>
+<Composer>Paul Di''Anno/Steve Harris</Composer>
 <Milliseconds>352731</Milliseconds>
 <Bytes>5648438</Bytes>
 <Unitprice>.99</Unitprice>
@@ -13007,7 +13009,7 @@
 
 <Track id="1219">
 <Name>Running Free</Name>
-<Composer>Paul Di'Anno/Steve Harris</Composer>
+<Composer>Paul Di''Anno/Steve Harris</Composer>
 <Milliseconds>228937</Milliseconds>
 <Bytes>3663872</Bytes>
 <Unitprice>.99</Unitprice>
@@ -13047,7 +13049,7 @@
 
 <Track id="1218">
 <Name>Sanctuary</Name>
-<Composer>David Murray/Paul Di'Anno/Steve Harris</Composer>
+<Composer>David Murray/Paul Di''Anno/Steve Harris</Composer>
 <Milliseconds>293250</Milliseconds>
 <Bytes>4694016</Bytes>
 <Unitprice>.99</Unitprice>
@@ -13366,7 +13368,7 @@
 </Track>
 
 <Track id="1260">
-<Name>Childhood's End</Name>
+<Name>Childhood''s End</Name>
 <Composer>Steve Harris</Composer>
 <Milliseconds>280607</Milliseconds>
 <Bytes>11225216</Bytes>
@@ -13445,7 +13447,7 @@
 
 <Track id="1269">
 <Name>02 - Sanctuary</Name>
-<Composer>David Murray/Paul Di'Anno/Steve Harris</Composer>
+<Composer>David Murray/Paul Di''Anno/Steve Harris</Composer>
 <Milliseconds>196284</Milliseconds>
 <Bytes>4712576</Bytes>
 <Unitprice>.99</Unitprice>
@@ -14299,7 +14301,7 @@
 
 <Track id="1369">
 <Name>Sanctuary</Name>
-<Composer>David Murray/Paul Di'Anno/Steve Harris</Composer>
+<Composer>David Murray/Paul Di''Anno/Steve Harris</Composer>
 <Milliseconds>317335</Milliseconds>
 <Bytes>12695680</Bytes>
 <Unitprice>.99</Unitprice>
@@ -14586,7 +14588,7 @@
 </Track>
 
 <Track id="1402">
-<Name>Blood On The World's Hands</Name>
+<Name>Blood On The World''s Hands</Name>
 <Composer>Steve Harris</Composer>
 <Milliseconds>357799</Milliseconds>
 <Bytes>14313600</Bytes>
@@ -14624,7 +14626,7 @@
 <Title>Virtual XI</Title>
 <Tracks>
 <Track id="1412">
-<Name>Don't Look To The Eyes Of A Stranger</Name>
+<Name>Don''t Look To The Eyes Of A Stranger</Name>
 <Composer>Steve Harris</Composer>
 <Milliseconds>483657</Milliseconds>
 <Bytes>19347584</Bytes>
@@ -14691,8 +14693,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 90;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="115">
 <Title>Sex Machine</Title>
@@ -14730,7 +14732,7 @@
 </Track>
 
 <Track id="1418">
-<Name>Papa's Got A Brand New Bag Pt.1</Name>
+<Name>Papa''s Got A Brand New Bag Pt.1</Name>
 <Composer>James Brown</Composer>
 <Milliseconds>127399</Milliseconds>
 <Bytes>4174420</Bytes>
@@ -14746,7 +14748,7 @@
 </Track>
 
 <Track id="1420">
-<Name>It's A Man's Man's Man's World</Name>
+<Name>It''s A Man''s Man''s Man''s World</Name>
 <Composer>Betty Newsome/James Brown</Composer>
 <Milliseconds>168228</Milliseconds>
 <Bytes>5541611</Bytes>
@@ -14762,7 +14764,7 @@
 </Track>
 
 <Track id="1422">
-<Name>Say It Loud, I'm Black And I'm Proud Pt.1</Name>
+<Name>Say It Loud, I''m Black And I''m Proud Pt.1</Name>
 <Composer>Alfred Ellis/James Brown</Composer>
 <Milliseconds>167392</Milliseconds>
 <Bytes>5478117</Bytes>
@@ -14794,7 +14796,7 @@
 </Track>
 
 <Track id="1426">
-<Name>I'm A Greedy Man Pt.1</Name>
+<Name>I''m A Greedy Man Pt.1</Name>
 <Composer>Charles Bobbitt/James Brown</Composer>
 <Milliseconds>217730</Milliseconds>
 <Bytes>7251211</Bytes>
@@ -14818,7 +14820,7 @@
 </Track>
 
 <Track id="1429">
-<Name>It's Too Funky In Here</Name>
+<Name>It''s Too Funky In Here</Name>
 <Composer>Brad Shapiro/George Jackson/Robert Miller/Walter Shaw</Composer>
 <Milliseconds>239072</Milliseconds>
 <Bytes>7973979</Bytes>
@@ -14834,7 +14836,7 @@
 </Track>
 
 <Track id="1431">
-<Name>I'm Real</Name>
+<Name>I''m Real</Name>
 <Composer>Full Force/James Brown</Composer>
 <Milliseconds>334236</Milliseconds>
 <Bytes>11183457</Bytes>
@@ -14861,8 +14863,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 91;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="116">
 <Title>Emergency On Planet Earth</Title>
@@ -14916,7 +14918,7 @@
 </Track>
 
 <Track id="1440">
-<Name>Whatever It Is, I Just Can't Stop</Name>
+<Name>Whatever It Is, I Just Can''t Stop</Name>
 <Composer>Jay Kay/Kay, Jay</Composer>
 <Milliseconds>247222</Milliseconds>
 <Bytes>8249453</Bytes>
@@ -14940,7 +14942,7 @@
 </Track>
 
 <Track id="1443">
-<Name>Didgin' Out</Name>
+<Name>Didgin'' Out</Name>
 <Composer>Buchanan, Wallis</Composer>
 <Milliseconds>157100</Milliseconds>
 <Bytes>5263555</Bytes>
@@ -15139,14 +15141,14 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 92;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="119">
 <Title>Get Born</Title>
 <Tracks>
 <Track id="1469">
-<Name>Look What You've Done</Name>
+<Name>Look What You''ve Done</Name>
 <Composer>N. Cester</Composer>
 <Milliseconds>230974</Milliseconds>
 <Bytes>7517083</Bytes>
@@ -15253,8 +15255,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 93;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="120">
 <Title>Are You Experienced?</Title>
@@ -15276,7 +15278,7 @@
 </Track>
 
 <Track id="1484">
-<Name>I Don't Live Today</Name>
+<Name>I Don''t Live Today</Name>
 <Composer>Jimi Hendrix</Composer>
 <Milliseconds>235311</Milliseconds>
 <Bytes>7661214</Bytes>
@@ -15399,8 +15401,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 94;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="121">
 <Title>Surfing with the Alien (Remastered)</Title>
@@ -15489,8 +15491,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 95;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="122">
 <Title>Jorge Ben Jor 25 Anos</Title>
@@ -15611,8 +15613,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 46;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="123">
 <Title>Jota Quest-1995</Title>
@@ -15717,8 +15719,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 96;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="124">
 <Title>Cafezinho</Title>
@@ -15839,8 +15841,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 97;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="125">
 <Title>Living After Midnight</Title>
@@ -15870,7 +15872,7 @@
 </Track>
 
 <Track id="1549">
-<Name>Hot Rockin'</Name>
+<Name>Hot Rockin''</Name>
 <Composer></Composer>
 <Milliseconds>197328</Milliseconds>
 <Bytes>6509179</Bytes>
@@ -15902,7 +15904,7 @@
 </Track>
 
 <Track id="1553">
-<Name>You've Got Another Thing Comin'</Name>
+<Name>You''ve Got Another Thing Comin''</Name>
 <Composer></Composer>
 <Milliseconds>305162</Milliseconds>
 <Bytes>9962558</Bytes>
@@ -15977,8 +15979,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 98;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="139">
 <Title>A TempestadeTempestade Ou O Livro Dos Dias</Title>
@@ -16008,7 +16010,7 @@
 </Track>
 
 <Track id="1672">
-<Name>L'Avventura</Name>
+<Name>L''Avventura</Name>
 <Composer>Renato Russo</Composer>
 <Milliseconds>278256</Milliseconds>
 <Bytes>9165769</Bytes>
@@ -16241,8 +16243,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 99;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="141">
 <Title>Greatest Hits</Title>
@@ -16256,7 +16258,7 @@
 </Track>
 
 <Track id="2435">
-<Name>Money's Too Tight To Mention</Name>
+<Name>Money''s Too Tight To Mention</Name>
 <Composer>John and William Valentine</Composer>
 <Milliseconds>268408</Milliseconds>
 <Bytes>8861921</Bytes>
@@ -16272,7 +16274,7 @@
 </Track>
 
 <Track id="2437">
-<Name>It's Only Love</Name>
+<Name>It''s Only Love</Name>
 <Composer>Jimmy and Vella Cameron</Composer>
 <Milliseconds>232594</Milliseconds>
 <Bytes>7659017</Bytes>
@@ -16288,7 +16290,7 @@
 </Track>
 
 <Track id="2439">
-<Name>You've Got It</Name>
+<Name>You''ve Got It</Name>
 <Composer>Mick Hucknall and Lamont Dozier</Composer>
 <Milliseconds>235232</Milliseconds>
 <Bytes>7712845</Bytes>
@@ -16296,7 +16298,7 @@
 </Track>
 
 <Track id="2440">
-<Name>If You Don't Know Me By Now</Name>
+<Name>If You Don''t Know Me By Now</Name>
 <Composer>Kenny Gamble and Leon Huff</Composer>
 <Milliseconds>206524</Milliseconds>
 <Bytes>6712634</Bytes>
@@ -16376,7 +16378,7 @@
 </Track>
 
 <Track id="2217">
-<Name>Don't Look Back</Name>
+<Name>Don''t Look Back</Name>
 <Composer></Composer>
 <Milliseconds>221100</Milliseconds>
 <Bytes>7344023</Bytes>
@@ -16392,7 +16394,7 @@
 </Track>
 
 <Track id="2219">
-<Name>I'm The Toughest</Name>
+<Name>I''m The Toughest</Name>
 <Composer></Composer>
 <Milliseconds>230191</Milliseconds>
 <Bytes>7657594</Bytes>
@@ -16496,7 +16498,7 @@
 </Track>
 
 <Track id="3135">
-<Name>Love Ain't No Stranger</Name>
+<Name>Love Ain''t No Stranger</Name>
 <Composer>Galley</Composer>
 <Milliseconds>259395</Milliseconds>
 <Bytes>8490428</Bytes>
@@ -16512,7 +16514,7 @@
 </Track>
 
 <Track id="3137">
-<Name>Now You're Gone</Name>
+<Name>Now You''re Gone</Name>
 <Composer>Vandenberg</Composer>
 <Milliseconds>251141</Milliseconds>
 <Bytes>8162193</Bytes>
@@ -16528,7 +16530,7 @@
 </Track>
 
 <Track id="3139">
-<Name>Slow An' Easy</Name>
+<Name>Slow An'' Easy</Name>
 <Composer>Moody</Composer>
 <Milliseconds>367255</Milliseconds>
 <Bytes>11961332</Bytes>
@@ -16544,7 +16546,7 @@
 </Track>
 
 <Track id="3141">
-<Name>You're Gonna Break My Hart Again</Name>
+<Name>You''re Gonna Break My Hart Again</Name>
 <Composer>Sykes</Composer>
 <Milliseconds>250853</Milliseconds>
 <Bytes>8176847</Bytes>
@@ -16616,7 +16618,7 @@
 </Track>
 
 <Track id="1706">
-<Name>It Ain't Over 'Til It's Over</Name>
+<Name>It Ain''t Over ''Til It''s Over</Name>
 <Composer>Lenny Kravitz</Composer>
 <Milliseconds>242703</Milliseconds>
 <Bytes>8078936</Bytes>
@@ -16624,7 +16626,7 @@
 </Track>
 
 <Track id="1707">
-<Name>Can't Get You Off My Mind</Name>
+<Name>Can''t Get You Off My Mind</Name>
 <Composer>Lenny Kravitz</Composer>
 <Milliseconds>273815</Milliseconds>
 <Bytes>8937150</Bytes>
@@ -16707,8 +16709,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 100;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="142">
 <Title>Lulu Santos - RCA 100 Anos De M�sica - �lbum 01</Title>
@@ -16947,8 +16949,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 101;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="144">
 <Title>Misplaced Childhood</Title>
@@ -17037,8 +17039,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 102;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="145">
 <Title>Barulhinho Bom</Title>
@@ -17191,8 +17193,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 103;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="146">
 <Title>Seek And Shall Find: More Of The Best (1963-1981)</Title>
@@ -17206,7 +17208,7 @@
 </Track>
 
 <Track id="1774">
-<Name>Get My Hands On Some Lovin'</Name>
+<Name>Get My Hands On Some Lovin''</Name>
 <Composer></Composer>
 <Milliseconds>149054</Milliseconds>
 <Bytes>4860380</Bytes>
@@ -17222,7 +17224,7 @@
 </Track>
 
 <Track id="1776">
-<Name>You've Been A Long Time Coming</Name>
+<Name>You''ve Been A Long Time Coming</Name>
 <Composer>Brian Holland/Eddie Holland/Lamont Dozier</Composer>
 <Milliseconds>137221</Milliseconds>
 <Bytes>4437949</Bytes>
@@ -17238,7 +17240,7 @@
 </Track>
 
 <Track id="1778">
-<Name>You're What's Happening (In The World Today)</Name>
+<Name>You''re What''s Happening (In The World Today)</Name>
 <Composer>Allen Story/George Gordy/Robert Gordy</Composer>
 <Milliseconds>142027</Milliseconds>
 <Bytes>4631104</Bytes>
@@ -17254,7 +17256,7 @@
 </Track>
 
 <Track id="1780">
-<Name>It's A Bitter Pill To Swallow</Name>
+<Name>It''s A Bitter Pill To Swallow</Name>
 <Composer>Smokey Robinson/Warren "Pete" Moore</Composer>
 <Milliseconds>194821</Milliseconds>
 <Bytes>6477882</Bytes>
@@ -17270,7 +17272,7 @@
 </Track>
 
 <Track id="1782">
-<Name>Gonna Keep On Tryin' Till I Win Your Love</Name>
+<Name>Gonna Keep On Tryin'' Till I Win Your Love</Name>
 <Composer>Barrett Strong/Norman Whitfield</Composer>
 <Milliseconds>176404</Milliseconds>
 <Bytes>5789945</Bytes>
@@ -17278,7 +17280,7 @@
 </Track>
 
 <Track id="1783">
-<Name>Gonna Give Her All The Love I've Got</Name>
+<Name>Gonna Give Her All The Love I''ve Got</Name>
 <Composer>Barrett Strong/Norman Whitfield</Composer>
 <Milliseconds>210886</Milliseconds>
 <Bytes>6893603</Bytes>
@@ -17345,8 +17347,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 104;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="147">
 <Title>The Best Of Men At Work</Title>
@@ -17400,7 +17402,7 @@
 </Track>
 
 <Track id="1797">
-<Name>It's a Mistake</Name>
+<Name>It''s a Mistake</Name>
 <Composer></Composer>
 <Milliseconds>273371</Milliseconds>
 <Bytes>8979965</Bytes>
@@ -17435,8 +17437,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 105;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="158">
 <Title>Milton Nascimento Ao Vivo</Title>
@@ -17659,8 +17661,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 42;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="160">
 <Title>Ace Of Spades</Title>
@@ -17770,7 +17772,7 @@
 </Track>
 
 <Track id="1955">
-<Name>Please Don't Touch</Name>
+<Name>Please Don''t Touch</Name>
 <Composer>Heath/Robinson</Composer>
 <Milliseconds>169926</Milliseconds>
 <Bytes>5557002</Bytes>
@@ -17789,8 +17791,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 106;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="161">
 <Title>Demorou...</Title>
@@ -17895,8 +17897,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 108;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="162">
 <Title>Motley Crue Greatest Hits</Title>
@@ -17958,7 +17960,7 @@
 </Track>
 
 <Track id="1976">
-<Name>Same Ol' Situation</Name>
+<Name>Same Ol'' Situation</Name>
 <Composer>Mick Mars/Nikki Sixx/Tommy Lee/Vince Neil</Composer>
 <Milliseconds>254511</Milliseconds>
 <Bytes>8283958</Bytes>
@@ -17982,7 +17984,7 @@
 </Track>
 
 <Track id="1979">
-<Name>Don't Go Away Mad (Just Go Away)</Name>
+<Name>Don''t Go Away Mad (Just Go Away)</Name>
 <Composer>Mick Mars/Nikki Sixx</Composer>
 <Milliseconds>279980</Milliseconds>
 <Bytes>9188156</Bytes>
@@ -17998,7 +18000,7 @@
 </Track>
 
 <Track id="1981">
-<Name>Smokin' in The Boys Room</Name>
+<Name>Smokin'' in The Boys Room</Name>
 <Composer>Cub Coda/Michael Lutz</Composer>
 <Milliseconds>206837</Milliseconds>
 <Bytes>6735408</Bytes>
@@ -18041,8 +18043,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 109;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="163">
 <Title>From The Muddy Banks Of The Wishkah [Live]</Title>
@@ -18168,7 +18170,7 @@
 </Track>
 
 <Track id="2001">
-<Name>Tourette's</Name>
+<Name>Tourette''s</Name>
 <Composer>Kurt Cobain</Composer>
 <Milliseconds>115591</Milliseconds>
 <Bytes>3753246</Bytes>
@@ -18289,8 +18291,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 110;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="165">
 <Title>Compositores</Title>
@@ -18419,8 +18421,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 111;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="166">
 <Title>Olodum</Title>
@@ -18541,8 +18543,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 112;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="167">
 <Title>Ac�stico MTV</Title>
@@ -18955,8 +18957,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 113;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="170">
 <Title>Bark at the Moon (Remastered)</Title>
@@ -18976,7 +18978,7 @@
 <Title>Blizzard of Ozz</Title>
 <Tracks>
 <Track id="2094">
-<Name>I Don't Know</Name>
+<Name>I Don''t Know</Name>
 <Composer>B. Daisley, O. Osbourne & R. Rhoads</Composer>
 <Milliseconds>312980</Milliseconds>
 <Bytes>5525339</Bytes>
@@ -19012,7 +19014,7 @@
 <Title>No More Tears (Remastered)</Title>
 <Tracks>
 <Track id="2097">
-<Name>Mama, I'm Coming Home</Name>
+<Name>Mama, I''m Coming Home</Name>
 <Composer>L. Kilmister, O. Osbourne & Z. Wylde</Composer>
 <Milliseconds>251586</Milliseconds>
 <Bytes>4302390</Bytes>
@@ -19034,7 +19036,7 @@
 <Title>Tribute</Title>
 <Tracks>
 <Track id="2099">
-<Name>I Don't Know</Name>
+<Name>I Don''t Know</Name>
 <Composer>O. Osbourne, R. Daisley, R. Rhoads</Composer>
 <Milliseconds>283088</Milliseconds>
 <Bytes>9207869</Bytes>
@@ -19251,8 +19253,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 114;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="175">
 <Title>Walking Into Clarksdale</Title>
@@ -19357,8 +19359,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 115;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="176">
 <Title>Original Soundtracks 1</Title>
@@ -19412,7 +19414,7 @@
 </Track>
 
 <Track id="2138">
-<Name>Theme From Let's Go Native</Name>
+<Name>Theme From Let''s Go Native</Name>
 <Composer>Brian Eno, Bono, Adam Clayton, The Edge & Larry Mullen Jnr.</Composer>
 <Milliseconds>186723</Milliseconds>
 <Bytes>6179777</Bytes>
@@ -19479,15 +19481,15 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 116;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="177">
 <Title>The Beast Live</Title>
 <Tracks>
 <Track id="2140">
 <Name>Killers</Name>
-<Composer>Paul Di'Anno/Steve Harris</Composer>
+<Composer>Paul Di''Anno/Steve Harris</Composer>
 <Milliseconds>309995</Milliseconds>
 <Bytes>10009697</Bytes>
 <Unitprice>.99</Unitprice>
@@ -19527,7 +19529,7 @@
 
 <Track id="2145">
 <Name>Sanctuary</Name>
-<Composer>David Murray/Paul Di'Anno/Steve Harris</Composer>
+<Composer>David Murray/Paul Di''Anno/Steve Harris</Composer>
 <Milliseconds>198844</Milliseconds>
 <Bytes>6423543</Bytes>
 <Unitprice>.99</Unitprice>
@@ -19535,7 +19537,7 @@
 
 <Track id="2146">
 <Name>Running Free</Name>
-<Composer>Paul Di'Anno/Steve Harris</Composer>
+<Composer>Paul Di''Anno/Steve Harris</Composer>
 <Milliseconds>199706</Milliseconds>
 <Bytes>6483496</Bytes>
 <Unitprice>.99</Unitprice>
@@ -19559,7 +19561,7 @@
 
 <Track id="2144">
 <Name>Remember Tomorrow</Name>
-<Composer>Paul Di'Anno/Steve Harris</Composer>
+<Composer>Paul Di''Anno/Steve Harris</Composer>
 <Milliseconds>326426</Milliseconds>
 <Bytes>10577976</Bytes>
 <Unitprice>.99</Unitprice>
@@ -19569,8 +19571,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 117;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="178">
 <Title>Live On Two Legs [Live]</Title>
@@ -19584,7 +19586,7 @@
 </Track>
 
 <Track id="2164">
-<Name>F*Ckin' Up</Name>
+<Name>F*Ckin'' Up</Name>
 <Composer>Neil Young</Composer>
 <Milliseconds>377652</Milliseconds>
 <Bytes>12360893</Bytes>
@@ -19820,7 +19822,7 @@
 <Title>Riot Act</Title>
 <Tracks>
 <Track id="2178">
-<Name>Can't Keep</Name>
+<Name>Can''t Keep</Name>
 <Composer>Eddie Vedder</Composer>
 <Milliseconds>219428</Milliseconds>
 <Bytes>7215713</Bytes>
@@ -20139,8 +20141,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 118;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="183">
 <Title>Dark Side Of The Moon</Title>
@@ -20221,8 +20223,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 120;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="184">
 <Title>Os C?es Ladram Mas A Caravana N?o P�ra</Title>
@@ -20359,8 +20361,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 121;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="187">
 <Title>Out Of Time</Title>
@@ -20457,8 +20459,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 122;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="188">
 <Title>Green</Title>
@@ -20684,7 +20686,7 @@
 </Track>
 
 <Track id="2333">
-<Name>It's The End Of The World As We Know It (And I Feel Fine)</Name>
+<Name>It''s The End Of The World As We Know It (And I Feel Fine)</Name>
 <Composer>R.E.M.</Composer>
 <Milliseconds>244819</Milliseconds>
 <Bytes>7998987</Bytes>
@@ -20716,7 +20718,7 @@
 </Track>
 
 <Track id="2323">
-<Name>Don't Go Back To Rockville</Name>
+<Name>Don''t Go Back To Rockville</Name>
 <Composer>R.E.M.</Composer>
 <Milliseconds>272352</Milliseconds>
 <Bytes>9010715</Bytes>
@@ -20740,7 +20742,7 @@
 </Track>
 
 <Track id="2326">
-<Name>Can't Get There From Here</Name>
+<Name>Can''t Get There From Here</Name>
 <Composer>R.E.M.</Composer>
 <Milliseconds>220630</Milliseconds>
 <Bytes>7285936</Bytes>
@@ -20807,8 +20809,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 124;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="191">
 <Title>Cesta B�sica</Title>
@@ -20897,8 +20899,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 125;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="192">
 <Title>Raul Seixas</Title>
@@ -21019,8 +21021,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 126;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="193">
 <Title>Blood Sugar Sex Magik</Title>
@@ -21034,7 +21036,7 @@
 </Track>
 
 <Track id="2374">
-<Name>They're Red Hot</Name>
+<Name>They''re Red Hot</Name>
 <Composer>Robert Johnson</Composer>
 <Milliseconds>71941</Milliseconds>
 <Bytes>2382220</Bytes>
@@ -21200,7 +21202,7 @@
 </Track>
 
 <Track id="2379">
-<Name>Don't Forget Me</Name>
+<Name>Don''t Forget Me</Name>
 <Composer>Anthony Kiedis, Flea, John Frusciante, and Chad Smith</Composer>
 <Milliseconds>277995</Milliseconds>
 <Bytes>9107071</Bytes>
@@ -21216,7 +21218,7 @@
 </Track>
 
 <Track id="2381">
-<Name>Can't Stop</Name>
+<Name>Can''t Stop</Name>
 <Composer>Anthony Kiedis, Flea, John Frusciante, and Chad Smith</Composer>
 <Milliseconds>269400</Milliseconds>
 <Bytes>8872479</Bytes>
@@ -21390,7 +21392,7 @@
 </Track>
 
 <Track id="2405">
-<Name>Road Trippin'</Name>
+<Name>Road Trippin''</Name>
 <Composer>Red Hot Chili Peppers</Composer>
 <Milliseconds>205635</Milliseconds>
 <Bytes>6685831</Bytes>
@@ -21425,8 +21427,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 127;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="196">
 <Title>Retrospective I (1974-1980)</Title>
@@ -21547,8 +21549,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 128;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="199">
 <Title>Maquinarama</Title>
@@ -21747,8 +21749,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 130;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="201">
 <Title>Judas 0: B-Sides and Rarities</Title>
@@ -21810,7 +21812,7 @@
 </Track>
 
 <Track id="2479">
-<Name>Here's To The Atom Bomb</Name>
+<Name>Here''s To The Atom Bomb</Name>
 <Composer>Billy Corgan</Composer>
 <Milliseconds>266893</Milliseconds>
 <Bytes>8763140</Bytes>
@@ -22035,8 +22037,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 131;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="203">
 <Title>A-Sides</Title>
@@ -22181,14 +22183,14 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 132;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="205">
 <Title>In Step</Title>
 <Tracks>
 <Track id="2532">
-<Name>The House Is Rockin'</Name>
+<Name>The House Is Rockin''</Name>
 <Composer>Doyle Bramhall/Stevie Ray Vaughan</Composer>
 <Milliseconds>144352</Milliseconds>
 <Bytes>4706253</Bytes>
@@ -22252,7 +22254,7 @@
 </Track>
 
 <Track id="2540">
-<Name>Love Me Darlin'</Name>
+<Name>Love Me Darlin''</Name>
 <Composer>C. Burnett</Composer>
 <Milliseconds>201586</Milliseconds>
 <Bytes>6650869</Bytes>
@@ -22271,8 +22273,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 133;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="206">
 <Title>Core</Title>
@@ -22377,8 +22379,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 134;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="207">
 <Title>Mezmerize</Title>
@@ -22464,7 +22466,7 @@
 </Track>
 
 <Track id="2559">
-<Name>This Cocaine Makes Me Feel Like I'm On This Song</Name>
+<Name>This Cocaine Makes Me Feel Like I''m On This Song</Name>
 <Composer>Tankian, Serj</Composer>
 <Milliseconds>128339</Milliseconds>
 <Bytes>4185193</Bytes>
@@ -22475,8 +22477,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 135;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="208">
 <Title>[1997] Black Light Syndrome</Title>
@@ -22541,8 +22543,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 136;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="209">
 <Title>Live [Disc 1]</Title>
@@ -22674,7 +22676,7 @@
 </Track>
 
 <Track id="2587">
-<Name>Lickin'</Name>
+<Name>Lickin''</Name>
 <Composer>Chris Robinson/Rich Robinson</Composer>
 <Milliseconds>314409</Milliseconds>
 <Bytes>10331216</Bytes>
@@ -22709,8 +22711,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 137;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="211">
 <Title>The Singles</Title>
@@ -22863,8 +22865,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 138;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="212">
 <Title>Beyond Good And Evil</Title>
@@ -22988,7 +22990,7 @@
 </Track>
 
 <Track id="2623">
-<Name>Lil' Evil</Name>
+<Name>Lil'' Evil</Name>
 <Composer></Composer>
 <Milliseconds>165825</Milliseconds>
 <Bytes>5419655</Bytes>
@@ -23119,8 +23121,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 139;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="214">
 <Title>The Doors</Title>
@@ -23217,8 +23219,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 140;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="215">
 <Title>The Police Greatest Hits</Title>
@@ -23232,7 +23234,7 @@
 </Track>
 
 <Track id="2651">
-<Name>Can't Stand Losing You</Name>
+<Name>Can''t Stand Losing You</Name>
 <Composer>G M Sumner</Composer>
 <Milliseconds>181159</Milliseconds>
 <Bytes>5971983</Bytes>
@@ -23256,7 +23258,7 @@
 </Track>
 
 <Track id="2654">
-<Name>Don't Stand so Close to Me</Name>
+<Name>Don''t Stand so Close to Me</Name>
 <Composer>G M Sumner</Composer>
 <Milliseconds>241031</Milliseconds>
 <Bytes>7956658</Bytes>
@@ -23288,7 +23290,7 @@
 </Track>
 
 <Track id="2658">
-<Name>Spirit's in the Material World</Name>
+<Name>Spirit''s in the Material World</Name>
 <Composer>G M Sumner</Composer>
 <Milliseconds>181133</Milliseconds>
 <Bytes>5986622</Bytes>
@@ -23320,7 +23322,7 @@
 </Track>
 
 <Track id="2662">
-<Name>Don't Stand So Close to Me '86</Name>
+<Name>Don''t Stand So Close to Me ''86</Name>
 <Composer>G M Sumner</Composer>
 <Milliseconds>293590</Milliseconds>
 <Bytes>9636683</Bytes>
@@ -23339,8 +23341,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 141;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="216">
 <Title>Hot Rocks, 1964-1971 (Disc 1)</Title>
@@ -23370,7 +23372,7 @@
 </Track>
 
 <Track id="2670">
-<Name>Mother's Little Helper</Name>
+<Name>Mother''s Little Helper</Name>
 <Composer>Jagger/Richards</Composer>
 <Milliseconds>167549</Milliseconds>
 <Bytes>5422434</Bytes>
@@ -23410,7 +23412,7 @@
 </Track>
 
 <Track id="2675">
-<Name>Let's Spend The Night Together</Name>
+<Name>Let''s Spend The Night Together</Name>
 <Composer>Jagger/Richards</Composer>
 <Milliseconds>217495</Milliseconds>
 <Bytes>7137048</Bytes>
@@ -23689,8 +23691,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 142;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="219">
 <Title>Tangents</Title>
@@ -23913,14 +23915,14 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 143;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="221">
 <Title>My Generation - The Very Best Of The Who</Title>
 <Tracks>
 <Track id="2731">
-<Name>I Can't Explain</Name>
+<Name>I Can''t Explain</Name>
 <Composer>Pete Townshend</Composer>
 <Milliseconds>125152</Milliseconds>
 <Bytes>4082896</Bytes>
@@ -23952,7 +23954,7 @@
 </Track>
 
 <Track id="2735">
-<Name>I'm A Boy</Name>
+<Name>I''m A Boy</Name>
 <Composer>Pete Townshend</Composer>
 <Milliseconds>157126</Milliseconds>
 <Bytes>5120605</Bytes>
@@ -24016,7 +24018,7 @@
 </Track>
 
 <Track id="2743">
-<Name>Baba O'Riley</Name>
+<Name>Baba O''Riley</Name>
 <Composer>John Entwistle/Pete Townshend</Composer>
 <Milliseconds>309472</Milliseconds>
 <Bytes>10141660</Bytes>
@@ -24024,7 +24026,7 @@
 </Track>
 
 <Track id="2744">
-<Name>Won't Get Fooled Again (Full Length Version)</Name>
+<Name>Won''t Get Fooled Again (Full Length Version)</Name>
 <Composer>John Entwistle/Pete Townshend</Composer>
 <Milliseconds>513750</Milliseconds>
 <Bytes>16855521</Bytes>
@@ -24032,7 +24034,7 @@
 </Track>
 
 <Track id="2745">
-<Name>Let's See Action</Name>
+<Name>Let''s See Action</Name>
 <Composer>Pete Townshend</Composer>
 <Milliseconds>243513</Milliseconds>
 <Bytes>8078418</Bytes>
@@ -24083,8 +24085,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 144;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="222">
 <Title>Serie Sem Limite (Disc 1)</Title>
@@ -24264,7 +24266,7 @@
 </Track>
 
 <Track id="2772">
-<Name>I Don't Know What To Do With Myself</Name>
+<Name>I Don''t Know What To Do With Myself</Name>
 <Composer></Composer>
 <Milliseconds>221387</Milliseconds>
 <Bytes>7251478</Bytes>
@@ -24339,8 +24341,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 145;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="224">
 <Title>Ac�stico</Title>
@@ -24659,8 +24661,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 146;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="226">
 <Title>Battlestar Galactica: The Story So Far</Title>
@@ -24835,8 +24837,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 147;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="228">
 <Title>Heroes, Season 1</Title>
@@ -24890,7 +24892,7 @@
 </Track>
 
 <Track id="2840">
-<Name>Don't Look Back</Name>
+<Name>Don''t Look Back</Name>
 <Composer></Composer>
 <Milliseconds>2571154</Milliseconds>
 <Bytes>493628775</Bytes>
@@ -25029,8 +25031,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 148;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="229">
 <Title>Lost, Season 3</Title>
@@ -25734,7 +25736,7 @@
 </Track>
 
 <Track id="3362">
-<Name>There's No Place Like Home, Pt. 1</Name>
+<Name>There''s No Place Like Home, Pt. 1</Name>
 <Composer></Composer>
 <Milliseconds>2609526</Milliseconds>
 <Bytes>522919189</Bytes>
@@ -25742,7 +25744,7 @@
 </Track>
 
 <Track id="3363">
-<Name>There's No Place Like Home, Pt. 2</Name>
+<Name>There''s No Place Like Home, Pt. 2</Name>
 <Composer></Composer>
 <Milliseconds>2497956</Milliseconds>
 <Bytes>523748920</Bytes>
@@ -25750,7 +25752,7 @@
 </Track>
 
 <Track id="3364">
-<Name>There's No Place Like Home, Pt. 3</Name>
+<Name>There''s No Place Like Home, Pt. 3</Name>
 <Composer></Composer>
 <Milliseconds>2582957</Milliseconds>
 <Bytes>486161766</Bytes>
@@ -25793,8 +25795,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 149;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="232">
 <Title>Achtung Baby</Title>
@@ -25832,7 +25834,7 @@
 </Track>
 
 <Track id="2930">
-<Name>Who's Gonna Ride Your Wild Horses</Name>
+<Name>Who''s Gonna Ride Your Wild Horses</Name>
 <Composer>U2</Composer>
 <Milliseconds>316551</Milliseconds>
 <Bytes>10304369</Bytes>
@@ -25864,7 +25866,7 @@
 </Track>
 
 <Track id="2934">
-<Name>Tryin' To Throw Your Arms Around The World</Name>
+<Name>Tryin'' To Throw Your Arms Around The World</Name>
 <Composer>U2</Composer>
 <Milliseconds>232463</Milliseconds>
 <Bytes>7612124</Bytes>
@@ -25899,7 +25901,7 @@
 </Album>
 
 <Album id="233">
-<Title>All That You Can't Leave Behind</Title>
+<Title>All That You Can''t Leave Behind</Title>
 <Tracks>
 <Track id="2947">
 <Name>New York</Name>
@@ -25926,7 +25928,7 @@
 </Track>
 
 <Track id="2939">
-<Name>Stuck In A Moment You Can't Get Out Of</Name>
+<Name>Stuck In A Moment You Can''t Get Out Of</Name>
 <Composer>Adam Clayton, Bono, Larry Mullen, The Edge</Composer>
 <Milliseconds>272378</Milliseconds>
 <Bytes>8997366</Bytes>
@@ -26138,7 +26140,7 @@
 </Track>
 
 <Track id="2966">
-<Name>Sometimes You Can't Make It On Your Own</Name>
+<Name>Sometimes You Can''t Make It On Your Own</Name>
 <Composer>Adam Clayton, Bono, Larry Mullen & The Edge</Composer>
 <Milliseconds>308976</Milliseconds>
 <Bytes>10112863</Bytes>
@@ -26358,7 +26360,7 @@
 </Track>
 
 <Track id="2992">
-<Name>I Still Haven't Found What I'm Looking for</Name>
+<Name>I Still Haven''t Found What I''m Looking for</Name>
 <Composer>Bono/Clayton, Adam/Mullen Jr., Larry/The Edge</Composer>
 <Milliseconds>353567</Milliseconds>
 <Bytes>11542247</Bytes>
@@ -26446,7 +26448,7 @@
 </Track>
 
 <Track id="2988">
-<Name>Van Diemen's Land</Name>
+<Name>Van Diemen''s Land</Name>
 <Composer>Bono/Clayton, Adam/Mullen Jr., Larry/The Edge</Composer>
 <Milliseconds>186044</Milliseconds>
 <Bytes>5990280</Bytes>
@@ -26468,7 +26470,7 @@
 </Track>
 
 <Track id="3005">
-<Name>New Year's Day</Name>
+<Name>New Year''s Day</Name>
 <Composer>U2</Composer>
 <Milliseconds>258925</Milliseconds>
 <Bytes>8491818</Bytes>
@@ -26484,7 +26486,7 @@
 </Track>
 
 <Track id="3007">
-<Name>I Still Haven't Found What I'm Looking For</Name>
+<Name>I Still Haven''t Found What I''m Looking For</Name>
 <Composer>U2</Composer>
 <Milliseconds>280764</Milliseconds>
 <Bytes>9306737</Bytes>
@@ -26533,7 +26535,7 @@
 
 <Track id="3013">
 <Name>Sweetest Thing</Name>
-<Composer>U2 & Daragh O'Toole</Composer>
+<Composer>U2 & Daragh O''Toole</Composer>
 <Milliseconds>183066</Milliseconds>
 <Bytes>6071385</Bytes>
 <Unitprice>.99</Unitprice>
@@ -26626,7 +26628,7 @@
 </Track>
 
 <Track id="3020">
-<Name>New Year's Day</Name>
+<Name>New Year''s Day</Name>
 <Composer>U2</Composer>
 <Milliseconds>336274</Milliseconds>
 <Bytes>11054732</Bytes>
@@ -26704,7 +26706,7 @@
 </Track>
 
 <Track id="3033">
-<Name>Daddy's Gonna Pay For Your Crashed Car</Name>
+<Name>Daddy''s Gonna Pay For Your Crashed Car</Name>
 <Composer>U2; Bono</Composer>
 <Milliseconds>320287</Milliseconds>
 <Bytes>10609581</Bytes>
@@ -26798,7 +26800,7 @@
 </Track>
 
 <Track id="3259">
-<Name>I'm Losing You</Name>
+<Name>I''m Losing You</Name>
 <Composer></Composer>
 <Milliseconds>240719</Milliseconds>
 <Bytes>3907467</Bytes>
@@ -26937,8 +26939,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 150;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="241">
 <Title>UB40 The Best Of - Volume Two [UK]</Title>
@@ -27000,7 +27002,7 @@
 </Track>
 
 <Track id="3045">
-<Name>(I Can't Help) Falling In Love With You</Name>
+<Name>(I Can''t Help) Falling In Love With You</Name>
 <Composer></Composer>
 <Milliseconds>207568</Milliseconds>
 <Bytes>6905623</Bytes>
@@ -27024,7 +27026,7 @@
 </Track>
 
 <Track id="3048">
-<Name>C'est La Vie</Name>
+<Name>C''est La Vie</Name>
 <Composer></Composer>
 <Milliseconds>270053</Milliseconds>
 <Bytes>9031661</Bytes>
@@ -27059,8 +27061,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 151;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="242">
 <Title>Diver Down</Title>
@@ -27074,7 +27076,7 @@
 </Track>
 
 <Track id="3053">
-<Name>Hang 'Em High</Name>
+<Name>Hang ''Em High</Name>
 <Composer>Alex Van Halen/David Lee Roth/Edward Van Halen/Michael Anthony</Composer>
 <Milliseconds>210259</Milliseconds>
 <Bytes>6872314</Bytes>
@@ -27184,7 +27186,7 @@
 </Track>
 
 <Track id="3066">
-<Name>Runnin' With The Devil</Name>
+<Name>Runnin'' With The Devil</Name>
 <Composer>Edward Van Halen, Alex Van Halen, David Lee Roth, Michael Anthony</Composer>
 <Milliseconds>215902</Milliseconds>
 <Bytes>7061901</Bytes>
@@ -27232,7 +27234,7 @@
 </Track>
 
 <Track id="3072">
-<Name>Why Can't This Be Love</Name>
+<Name>Why Can''t This Be Love</Name>
 <Composer>Van Halen</Composer>
 <Milliseconds>227761</Milliseconds>
 <Bytes>7457655</Bytes>
@@ -27248,7 +27250,7 @@
 </Track>
 
 <Track id="3074">
-<Name>When It's Love</Name>
+<Name>When It''s Love</Name>
 <Composer>Edward Van Halen, Alex Van Halen, Michael Anthony,/Edward Van Halen, Alex Van Halen, Michael Anthony, Sammy Hagar</Composer>
 <Milliseconds>338991</Milliseconds>
 <Bytes>11049966</Bytes>
@@ -27272,7 +27274,7 @@
 </Track>
 
 <Track id="3077">
-<Name>Can't Stop Loving You</Name>
+<Name>Can''t Stop Loving You</Name>
 <Composer>Van Halen</Composer>
 <Milliseconds>248502</Milliseconds>
 <Bytes>8107896</Bytes>
@@ -27288,7 +27290,7 @@
 </Track>
 
 <Track id="3079">
-<Name>Can't Get This Stuff No More</Name>
+<Name>Can''t Get This Stuff No More</Name>
 <Composer>Edward Van Halen, Alex Van Halen, Michael Anthony,/Edward Van Halen, Alex Van Halen, Michael Anthony, David Lee Roth</Composer>
 <Milliseconds>315376</Milliseconds>
 <Bytes>10355753</Bytes>
@@ -27296,7 +27298,7 @@
 </Track>
 
 <Track id="3065">
-<Name>Ain't Talkin' 'bout Love</Name>
+<Name>Ain''t Talkin'' ''bout Love</Name>
 <Composer>Edward Van Halen, Alex Van Halen, David Lee Roth, Michael Anthony</Composer>
 <Milliseconds>228336</Milliseconds>
 <Bytes>7569506</Bytes>
@@ -27342,7 +27344,7 @@
 </Track>
 
 <Track id="3081">
-<Name>Runnin' With The Devil</Name>
+<Name>Runnin'' With The Devil</Name>
 <Composer>Edward Van Halen, Alex Van Halen, Michael Anthony and David Lee Roth</Composer>
 <Milliseconds>216032</Milliseconds>
 <Bytes>7056863</Bytes>
@@ -27366,7 +27368,7 @@
 </Track>
 
 <Track id="3084">
-<Name>Ain't Talkin' 'Bout Love</Name>
+<Name>Ain''t Talkin'' ''Bout Love</Name>
 <Composer>Edward Van Halen, Alex Van Halen, Michael Anthony and David Lee Roth</Composer>
 <Milliseconds>230060</Milliseconds>
 <Bytes>7617284</Bytes>
@@ -27374,7 +27376,7 @@
 </Track>
 
 <Track id="3085">
-<Name>I'm The One</Name>
+<Name>I''m The One</Name>
 <Composer>Edward Van Halen, Alex Van Halen, Michael Anthony and David Lee Roth</Composer>
 <Milliseconds>226507</Milliseconds>
 <Bytes>7373922</Bytes>
@@ -27382,7 +27384,7 @@
 </Track>
 
 <Track id="3086">
-<Name>Jamie's Cryin'</Name>
+<Name>Jamie''s Cryin''</Name>
 <Composer>Edward Van Halen, Alex Van Halen, Michael Anthony and David Lee Roth</Composer>
 <Milliseconds>210546</Milliseconds>
 <Bytes>6946086</Bytes>
@@ -27503,8 +27505,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 152;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="246">
 <Title>Contraband</Title>
@@ -27617,8 +27619,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 153;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="247">
 <Title>Vinicius De Moraes</Title>
@@ -27747,8 +27749,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 72;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="248">
 <Title>Ao Vivo [IMPORT]</Title>
@@ -27909,8 +27911,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 155;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="249">
 <Title>The Office, Season 1</Title>
@@ -28090,7 +28092,7 @@
 </Track>
 
 <Track id="3193">
-<Name>Valentine's Day</Name>
+<Name>Valentine''s Day</Name>
 <Composer></Composer>
 <Milliseconds>1270375</Milliseconds>
 <Bytes>253552710</Bytes>
@@ -28098,7 +28100,7 @@
 </Track>
 
 <Track id="3194">
-<Name>Dwight's Speech</Name>
+<Name>Dwight''s Speech</Name>
 <Composer></Composer>
 <Milliseconds>1278041</Milliseconds>
 <Bytes>255001728</Bytes>
@@ -28114,7 +28116,7 @@
 </Track>
 
 <Track id="3196">
-<Name>Michael's Birthday</Name>
+<Name>Michael''s Birthday</Name>
 <Composer></Composer>
 <Milliseconds>1237791</Milliseconds>
 <Bytes>247238398</Bytes>
@@ -28248,7 +28250,7 @@
 </Track>
 
 <Track id="3212">
-<Name>Producer's Cut: The Return</Name>
+<Name>Producer''s Cut: The Return</Name>
 <Composer></Composer>
 <Milliseconds>1700241</Milliseconds>
 <Bytes>337219980</Bytes>
@@ -28264,7 +28266,7 @@
 </Track>
 
 <Track id="3214">
-<Name>Phyllis's Wedding</Name>
+<Name>Phyllis''s Wedding</Name>
 <Composer></Composer>
 <Milliseconds>1271521</Milliseconds>
 <Bytes>258561054</Bytes>
@@ -28312,7 +28314,7 @@
 </Track>
 
 <Track id="3220">
-<Name>Women's Appreciation</Name>
+<Name>Women''s Appreciation</Name>
 <Composer></Composer>
 <Milliseconds>1732649</Milliseconds>
 <Bytes>338778844</Bytes>
@@ -28355,8 +28357,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 156;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="252">
 <Title>Un-Led-Ed</Title>
@@ -28373,8 +28375,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 157;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="253">
 <Title>Battlestar Galactica (Classic), Season 1</Title>
@@ -28444,7 +28446,7 @@
 </Track>
 
 <Track id="3246">
-<Name>Baltar's Escape</Name>
+<Name>Baltar''s Escape</Name>
 <Composer></Composer>
 <Milliseconds>2922088</Milliseconds>
 <Bytes>525564224</Bytes>
@@ -28575,8 +28577,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 158;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="254">
 <Title>Aquaman</Title>
@@ -28593,8 +28595,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 159;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="257">
 <Title>20th Century Masters - The Millennium Collection: The Best of Scorpions</Title>
@@ -28688,7 +28690,7 @@
 </Track>
 
 <Track id="3296">
-<Name>I Can't Explain</Name>
+<Name>I Can''t Explain</Name>
 <Composer></Composer>
 <Milliseconds>205332</Milliseconds>
 <Bytes>3482099</Bytes>
@@ -28699,8 +28701,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 179;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="258">
 <Title>House of Pain</Title>
@@ -28730,7 +28732,7 @@
 </Track>
 
 <Track id="3303">
-<Name>Top O' The Morning To Ya</Name>
+<Name>Top O'' The Morning To Ya</Name>
 <Composer>E. Schrody/L. Dimant</Composer>
 <Milliseconds>216633</Milliseconds>
 <Bytes>8667599</Bytes>
@@ -28778,7 +28780,7 @@
 </Track>
 
 <Track id="3309">
-<Name>Guess Who's Back</Name>
+<Name>Guess Who''s Back</Name>
 <Composer>E. Schrody/L. Muggerud</Composer>
 <Milliseconds>238393</Milliseconds>
 <Bytes>9537994</Bytes>
@@ -28861,8 +28863,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 180;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="259">
 <Title>Radio Brasil (O Som da Jovem Vanguarda) - Seleccao de Henrique Amaro</Title>
@@ -29007,8 +29009,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 36;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="260">
 <Title>Cake: B-Sides and Rarities</Title>
@@ -29025,8 +29027,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 196;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="262">
 <Title>Quiet Songs</Title>
@@ -29051,8 +29053,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 197;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="263">
 <Title>Muso Ko</Title>
@@ -29077,8 +29079,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 198;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="264">
 <Title>Realize</Title>
@@ -29103,8 +29105,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 199;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="265">
 <Title>Every Kind of Light</Title>
@@ -29118,7 +29120,7 @@
 </Track>
 
 <Track id="3353">
-<Name>I Guess You're Right</Name>
+<Name>I Guess You''re Right</Name>
 <Composer>Darius "Take One" Minwalla/Jon Auer/Ken Stringfellow/Matt Harris</Composer>
 <Milliseconds>212044</Milliseconds>
 <Bytes>3453849</Bytes>
@@ -29129,8 +29131,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 200;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="266">
 <Title>Duos II</Title>
@@ -29147,14 +29149,14 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 201;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="267">
 <Title>Worlds</Title>
 <Tracks>
 <Track id="3357">
-<Name>OAM's Blues</Name>
+<Name>OAM''s Blues</Name>
 <Composer>Aaron Goldberg</Composer>
 <Milliseconds>266936</Milliseconds>
 <Bytes>4292028</Bytes>
@@ -29165,8 +29167,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 202;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="268">
 <Title>The Best of Beethoven</Title>
@@ -29183,8 +29185,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 203;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="269">
 <Title>Temple of the Dog</Title>
@@ -29273,8 +29275,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 204;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="270">
 <Title>Carry On</Title>
@@ -29312,7 +29314,7 @@
 </Track>
 
 <Track id="3379">
-<Name>She'll Never Be Your Man</Name>
+<Name>She''ll Never Be Your Man</Name>
 <Composer>Chris Cornell</Composer>
 <Milliseconds>204078</Milliseconds>
 <Bytes>3355715</Bytes>
@@ -29395,8 +29397,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 205;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="272">
 <Title>Adorate Deum: Gregorian Chant from the Proper of the Mass</Title>
@@ -29413,8 +29415,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 206;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="273">
 <Title>Allegri: Miserere</Title>
@@ -29431,8 +29433,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 207;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="274">
 <Title>Pachelbel: Canon & Gigue</Title>
@@ -29463,8 +29465,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 208;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="275">
 <Title>Vivaldi: The Four Seasons</Title>
@@ -29481,8 +29483,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 209;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="276">
 <Title>Bach: Violin Concertos</Title>
@@ -29499,8 +29501,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 210;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="277">
 <Title>Bach: Goldberg Variations</Title>
@@ -29517,8 +29519,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 211;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="278">
 <Title>Bach: The Cello Suites</Title>
@@ -29535,8 +29537,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 212;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="279">
 <Title>Handel: The Messiah (Highlights)</Title>
@@ -29553,8 +29555,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 213;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="280">
 <Title>The World of Classical Favourites</Title>
@@ -29579,8 +29581,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 214;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="281">
 <Title>Sir Neville Marriner: A Celebration</Title>
@@ -29597,8 +29599,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 215;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="282">
 <Title>Mozart: Wind Concertos</Title>
@@ -29615,8 +29617,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 216;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="283">
 <Title>Haydn: Symphonies 99 - 104</Title>
@@ -29633,8 +29635,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 217;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="284">
 <Title>Beethoven: Symhonies Nos. 5 & 6</Title>
@@ -29651,8 +29653,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 218;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="285">
 <Title>A Soprano Inspired</Title>
@@ -29669,14 +29671,14 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 219;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="286">
 <Title>Great Opera Choruses</Title>
 <Tracks>
 <Track id="3417">
-<Name>Nabucco: Chorus, "Va, Pensiero, Sull'ali Dorate"</Name>
+<Name>Nabucco: Chorus, "Va, Pensiero, Sull''ali Dorate"</Name>
 <Composer>Giuseppe Verdi</Composer>
 <Milliseconds>274504</Milliseconds>
 <Bytes>4498583</Bytes>
@@ -29687,8 +29689,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 220;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="287">
 <Title>Wagner: Favourite Overtures</Title>
@@ -29705,8 +29707,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 221;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="288">
 <Title>Faur�: Requiem, Ravel: Pavane & Others</Title>
@@ -29723,8 +29725,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 222;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="289">
 <Title>Tchaikovsky: The Nutcracker</Title>
@@ -29741,8 +29743,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 223;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="290">
 <Title>The Last Night of the Proms</Title>
@@ -29759,8 +29761,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 224;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="291">
 <Title>Puccini: Madama Butterfly - Highlights</Title>
@@ -29777,8 +29779,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 225;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="292">
 <Title>Holst: The Planets, Op. 32 & Vaughan Williams: Fantasies</Title>
@@ -29823,11 +29825,11 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 226;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="293">
-<Title>Pavarotti's Opera Made Easy</Title>
+<Title>Pavarotti''s Opera Made Easy</Title>
 <Tracks>
 <Track id="3424">
 <Name>Turandot, Act III, Nessun dorma!</Name>
@@ -29841,11 +29843,11 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 227;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="294">
-<Title>Great Performances - Barber's Adagio and Other Romantic Favorites for Strings</Title>
+<Title>Great Performances - Barber''s Adagio and Other Romantic Favorites for Strings</Title>
 <Tracks>
 <Track id="3425">
 <Name>Adagio for Strings from the String Quartet, Op. 11</Name>
@@ -29859,8 +29861,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 228;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="295">
 <Title>Carmina Burana</Title>
@@ -29877,8 +29879,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 229;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="296">
 <Title>A Copland Celebration, Vol. I</Title>
@@ -29895,8 +29897,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 230;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="297">
 <Title>Bach: Toccata & Fugue in D Minor</Title>
@@ -29913,8 +29915,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 231;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="298">
 <Title>Prokofiev: Symphony No.1</Title>
@@ -29931,14 +29933,14 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 232;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="299">
 <Title>Scheherazade</Title>
 <Tracks>
 <Track id="3432">
-<Name>Scheherazade, Op. 35: I. The Sea and Sindbad's Ship</Name>
+<Name>Scheherazade, Op. 35: I. The Sea and Sindbad''s Ship</Name>
 <Composer>Nikolai Rimsky-Korsakov</Composer>
 <Milliseconds>545203</Milliseconds>
 <Bytes>8916313</Bytes>
@@ -29949,8 +29951,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 233;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="300">
 <Title>Bach: The Brandenburg Concertos</Title>
@@ -29967,8 +29969,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 234;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="301">
 <Title>Chopin: Piano Concertos Nos. 1 & 2</Title>
@@ -29985,8 +29987,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 235;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="302">
 <Title>Mascagni: Cavalleria Rusticana</Title>
@@ -30003,8 +30005,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 236;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="303">
 <Title>Sibelius: Finlandia</Title>
@@ -30021,8 +30023,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 237;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="304">
 <Title>Beethoven Piano Sonatas: Moonlight & Pastorale</Title>
@@ -30039,8 +30041,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 238;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="305">
 <Title>Great Recordings of the Century - Mahler: Das Lied von der Erde</Title>
@@ -30057,8 +30059,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 240;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="306">
 <Title>Elgar: Cello Concerto & Vaughan Williams: Fantasias</Title>
@@ -30075,8 +30077,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 241;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="307">
 <Title>Adams, John: The Chairman Dances</Title>
@@ -30093,14 +30095,14 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 242;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="308">
-<Title>Tchaikovsky: 1812 Festival Overture, Op.49, Capriccio Italien & Beethoven: Wellington's Victory</Title>
+<Title>Tchaikovsky: 1812 Festival Overture, Op.49, Capriccio Italien & Beethoven: Wellington''s Victory</Title>
 <Tracks>
 <Track id="3442">
-<Name>Wellington's Victory or the Battle Symphony, Op.91: 2. Symphony of Triumph</Name>
+<Name>Wellington''s Victory or the Battle Symphony, Op.91: 2. Symphony of Triumph</Name>
 <Composer>Ludwig van Beethoven</Composer>
 <Milliseconds>412000</Milliseconds>
 <Bytes>6965201</Bytes>
@@ -30111,8 +30113,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 243;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="309">
 <Title>Palestrina: Missa Papae Marcelli & Allegri: Miserere</Title>
@@ -30129,8 +30131,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 244;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="310">
 <Title>Prokofiev: Romeo & Juliet</Title>
@@ -30150,7 +30152,7 @@
 <Title>Berlioz: Symphonie Fantastique</Title>
 <Tracks>
 <Track id="3446">
-<Name>Symphonie Fantastique, Op. 14: V. Songe d'une nuit du sabbat</Name>
+<Name>Symphonie Fantastique, Op. 14: V. Songe d''une nuit du sabbat</Name>
 <Composer>Hector Berlioz</Composer>
 <Milliseconds>561967</Milliseconds>
 <Bytes>9173344</Bytes>
@@ -30161,8 +30163,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 245;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="313">
 <Title>Bizet: Carmen Highlights</Title>
@@ -30179,8 +30181,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 246;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="314">
 <Title>English Renaissance</Title>
@@ -30205,8 +30207,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 247;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="316">
 <Title>Grieg: Peer Gynt Suites & Sibelius: Pell�as et M�lisande</Title>
@@ -30251,8 +30253,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 248;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="317">
 <Title>Mozart Gala: Famous Arias</Title>
@@ -30269,8 +30271,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 249;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="318">
 <Title>SCRIABIN: Vers la flamme</Title>
@@ -30287,8 +30289,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 250;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="319">
 <Title>Armada: Music from the Courts of England and Spain</Title>
@@ -30305,14 +30307,14 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 251;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="321">
 <Title>Back to Black</Title>
 <Tracks>
 <Track id="3465">
-<Name>You Know I'm No Good (feat. Ghostface Killah)</Name>
+<Name>You Know I''m No Good (feat. Ghostface Killah)</Name>
 <Composer></Composer>
 <Milliseconds>202320</Milliseconds>
 <Bytes>3260658</Bytes>
@@ -30337,7 +30339,7 @@
 
 <Track id="3462">
 <Name>Wake Up Alone</Name>
-<Composer>Paul O'duffy</Composer>
+<Composer>Paul O''duffy</Composer>
 <Milliseconds>221413</Milliseconds>
 <Bytes>3576773</Bytes>
 <Unitprice>.99</Unitprice>
@@ -30384,7 +30386,7 @@
 </Track>
 
 <Track id="3456">
-<Name>You Know I'm No Good</Name>
+<Name>You Know I''m No Good</Name>
 <Composer></Composer>
 <Milliseconds>256946</Milliseconds>
 <Bytes>4133694</Bytes>
@@ -30505,8 +30507,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 252;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="323">
 <Title>Carried to Dust (Bonus Track Version)</Title>
@@ -30523,11 +30525,11 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 253;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="324">
-<Title>Beethoven: Symphony No. 6 'Pastoral' Etc.</Title>
+<Title>Beethoven: Symphony No. 6 ''Pastoral'' Etc.</Title>
 <Tracks>
 <Track id="3479">
 <Name>Prometheus Overture, Op. 43</Name>
@@ -30541,8 +30543,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 254;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="325">
 <Title>Bartok: Violin & Viola Concertos</Title>
@@ -30559,14 +30561,14 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 255;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="326">
-<Title>Mendelssohn: A Midsummer Night's Dream</Title>
+<Title>Mendelssohn: A Midsummer Night''s Dream</Title>
 <Tracks>
 <Track id="3481">
-<Name>A Midsummer Night's Dream, Op.61 Incidental Music: No.7 Notturno</Name>
+<Name>A Midsummer Night''s Dream, Op.61 Incidental Music: No.7 Notturno</Name>
 <Composer></Composer>
 <Milliseconds>387826</Milliseconds>
 <Bytes>6497867</Bytes>
@@ -30577,8 +30579,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 256;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="327">
 <Title>Bach: Orchestral Suites Nos. 1 - 4</Title>
@@ -30595,8 +30597,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 257;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="328">
 <Title>Charpentier: Divertissements, Airs & Concerts</Title>
@@ -30613,8 +30615,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 258;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="329">
 <Title>South American Getaway</Title>
@@ -30631,8 +30633,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 259;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="330">
 <Title>G�recki: Symphony No. 3</Title>
@@ -30649,8 +30651,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 260;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="331">
 <Title>Purcell: The Fairy Queen</Title>
@@ -30667,8 +30669,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 261;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="332">
 <Title>The Ultimate Relexation Album</Title>
@@ -30685,8 +30687,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 262;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="333">
 <Title>Purcell: Music for the Queen Mary</Title>
@@ -30703,8 +30705,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 263;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="334">
 <Title>Weill: The Seven Deadly Sins</Title>
@@ -30721,8 +30723,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 264;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="335">
 <Title>J.S. Bach: Chaconne, Suite in E Minor, Partita in E Major & Prelude, Fugue and Allegro</Title>
@@ -30739,8 +30741,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 265;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="337">
 <Title>Szymanowski: Piano Works, Vol. 1</Title>
@@ -30757,8 +30759,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 266;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="338">
 <Title>Nielsen: The Six Symphonies</Title>
@@ -30775,11 +30777,11 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 267;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="339">
-<Title>Great Recordings of the Century: Paganini's 24 Caprices</Title>
+<Title>Great Recordings of the Century: Paganini''s 24 Caprices</Title>
 <Tracks>
 <Track id="3495">
 <Name>24 Caprices, Op. 1, No. 24, for Solo Violin, in A Minor</Name>
@@ -30793,11 +30795,11 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 268;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="340">
-<Title>Liszt - 12 �tudes D'Execution Transcendante</Title>
+<Title>Liszt - 12 �tudes D''Execution Transcendante</Title>
 <Tracks>
 <Track id="3496">
 <Name>�tude 1, In C Major - Preludio (Presto) - Liszt</Name>
@@ -30811,8 +30813,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 269;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="341">
 <Title>Great Recordings of the Century - Shubert: Schwanengesang, 4 Lieder</Title>
@@ -30829,8 +30831,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 270;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="342">
 <Title>Locatelli: Concertos for Violin, Strings and Continuo, Vol. 3</Title>
@@ -30847,11 +30849,11 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 271;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="344">
-<Title>Schubert: The Late String Quartets & String Quintet (3 CD's)</Title>
+<Title>Schubert: The Late String Quartets & String Quintet (3 CD''s)</Title>
 <Tracks>
 <Track id="3500">
 <Name>String Quartet No. 12 in C Minor, D. 703 "Quartettsatz": II. Andante - Allegro assai</Name>
@@ -30865,14 +30867,14 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 272;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="345">
-<Title>Monteverdi: L'Orfeo</Title>
+<Title>Monteverdi: L''Orfeo</Title>
 <Tracks>
 <Track id="3501">
-<Name>L'orfeo, Act 3, Sinfonia (Orchestra)</Name>
+<Name>L''orfeo, Act 3, Sinfonia (Orchestra)</Name>
 <Composer>Claudio Monteverdi</Composer>
 <Milliseconds>66639</Milliseconds>
 <Bytes>1189062</Bytes>
@@ -30883,8 +30885,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 273;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="346">
 <Title>Mozart: Chamber Music</Title>
@@ -30901,8 +30903,8 @@
 </Album>
 
 </Albums>
-
-<?xml version="1.0" encoding="UTF - 8"?>
+]' WHERE ARTISTID = 274;
+UPDATE ARTIST SET ALBUMS_XML = q'[<?xml version="1.0" encoding="UTF - 8"?>
 <Albums>
 <Album id="347">
 <Title>Koyaanisqatsi (Soundtrack from the Motion Picture)</Title>
@@ -30919,4 +30921,7 @@
 </Album>
 
 </Albums>
+]' WHERE ARTISTID = 275;
+commit; 
 
+exit;

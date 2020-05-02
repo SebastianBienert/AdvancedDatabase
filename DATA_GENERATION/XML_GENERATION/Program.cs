@@ -26,7 +26,7 @@ namespace XML_GENERATION
 
             var thirdXMLSource = JsonConvert.DeserializeObject<ArtistXML>(File.ReadAllText(ArtistXMLParser.XML_SOURCE_PATH));
             var thirdXML = ArtistXMLParser.Parse(thirdXMLSource.items);
-            File.WriteAllLines(ArtistXMLParser.XML_PATH, thirdXML.Select(x => x.Item2));
+            File.WriteAllLines(ArtistXMLParser.XML_PATH, thirdXML);
 
             Console.ReadKey();
         }
