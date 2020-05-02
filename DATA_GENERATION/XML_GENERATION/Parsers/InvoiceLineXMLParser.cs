@@ -18,7 +18,7 @@ namespace XML_GENERATION.Parsers
             {
                 var xmlStringBuilder = new StringBuilder();
 
-                xmlStringBuilder.AppendLine(@$"to_clob('<Invoice id=""{g.Key}"">");
+                xmlStringBuilder.AppendLine($@"to_clob('<Invoice id=""{g.Key}"">");
                 xmlStringBuilder.AppendLine("<InvoiceLines>')");
 
                 var invoiceLines = g.Select(il =>

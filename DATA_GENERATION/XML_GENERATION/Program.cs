@@ -30,11 +30,11 @@ namespace XML_GENERATION
 
             File.WriteAllLines(PlaylistXMLParser.SQL_PATH, sqlInserts);
 
-            // var thirdXMLSource = JsonConvert.DeserializeObject<ArtistXML>(File.ReadAllText(ArtistXMLParser.XML_SOURCE_PATH));
-            // var thirdXML = ArtistXMLParser.Parse(thirdXMLSource.items);
-            // File.WriteAllLines(ArtistXMLParser.XML_PATH, thirdXML);
+            var thirdXMLSource = JsonConvert.DeserializeObject<ArtistXML>(File.ReadAllText(ArtistXMLParser.XML_SOURCE_PATH));
+            var thirdXML = ArtistXMLParser.Parse(thirdXMLSource.items);
+            File.WriteAllLines(ArtistXMLParser.XML_PATH, thirdXML);
 
-           // Console.ReadKey();
+            // Console.ReadKey();
         }
 
 

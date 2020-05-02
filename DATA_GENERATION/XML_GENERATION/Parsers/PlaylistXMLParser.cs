@@ -11,7 +11,7 @@ namespace XML_GENERATION.Parsers
     {
         public static string XML_SOURCE_PATH = Program.PROJECT_DIR + @"\..\..\DATA\xml2_source.json";
         public static string XML_PATH = Program.PROJECT_DIR + @"\..\..\xml2.xml";
-        public static string SQL_PATH = Program.PROJECT_DIR + @"\..\..\sql2.sql";
+        public static string SQL_PATH = Program.PROJECT_DIR + @"\..\..\xml2.sql";
 
         public static IEnumerable<(int, string)> Parse(IEnumerable<PlaylistXMLItem> items)
         {
