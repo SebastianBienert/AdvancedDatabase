@@ -12,25 +12,26 @@ xmlns:xdb="http://xmlns.oracle.com/xdb"
           <xs:complexType>
             <xs:sequence>
               <xs:element type="xs:string" name="Title"/>
-              <xs:element name="Tracks2" xdb:SQLType="Tracks2" xdb:SQLCollType="Track4" maxOccurs="unbounded" minOccurs="0">
+              <xs:element name="Tracks2" xdb:SQLType="Tracks2" xdb:SQLCollType="Track100" maxOccurs="unbounded" minOccurs="0">
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element name="Track3" xdb:SQLType="Track3" xdb:SQLCollType="Track4" maxOccurs="unbounded" minOccurs="0">
+                    <xs:element name="Track3" xdb:SQLType="Track3" xdb:SQLCollType="Track99" maxOccurs="unbounded" minOccurs="0">
                       <xs:complexType>
                         <xs:sequence>
                           <xs:element type="xs:string" name="Name"/>
                           <xs:element type="xs:string" name="Composer"/>
-                          <xs:element type="xs:int" name="Miliseconds"/>
-                          <xs:element type="xs:int" name="Bytes"/>
+                          <xs:element type="xs:integer" name="Milliseconds"/>
+                          <xs:element type="xs:integer" name="Bytes"/>
                           <xs:element type="xs:float" name="Unitprice"/>
                         </xs:sequence>
+						<xs:attribute type="xs:positiveInteger" name="id" use="required"/>
                       </xs:complexType>
                     </xs:element>
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
             </xs:sequence>
-            <xs:attribute type="xs:positiveInteger" name="id" use="optional"/>
+            <xs:attribute type="xs:positiveInteger" name="id" use="required"/>
           </xs:complexType>
         </xs:element>
       </xs:sequence>
@@ -40,11 +41,6 @@ xmlns:xdb="http://xmlns.oracle.com/xdb"
 );
 end;
 
-CREATE TABLE Artist_XML
-(
-    ArtistId NUMBER NOT NULL,
-    Name VARCHAR2(120),
-    Albums XMLTYPE
-)
-XMLTYPE COLUMN Albums
-XMLSCHEMA "Albums_detail.xsd" ELEMENT "Albums";
+ALTER TABLE artist add(albums_xml XMLTYPE) 
+   XMLType COLUMN albums_xml
+   xmlschema "Albums_detail.xsd" ELEMENT "Albums";
