@@ -16,9 +16,9 @@ namespace XML_GENERATION
 
         static void Main(string[] args)
         {
-            // var firstXmlSource = JsonConvert.DeserializeObject<InvoiceLineXML>(File.ReadAllText(InvoiceLineXMLParser.XML1_SOURCE_PATH));
-            // var firstXml = InvoiceLineXMLParser.Parse(firstXmlSource.items);
-            // File.WriteAllLines(InvoiceLineXMLParser.FIRST_XML_PATH, firstXml);
+            var firstXmlSource = JsonConvert.DeserializeObject<InvoiceLineXML>(File.ReadAllText(InvoiceLineXMLParser.XML1_SOURCE_PATH));
+            var firstXml = InvoiceLineXMLParser.Parse(firstXmlSource.items.Take(10));
+            File.WriteAllLines(InvoiceLineXMLParser.FIRST_XML_PATH, firstXml);
 
             var secondXMLSource = JsonConvert.DeserializeObject<PlaylistXML>(File.ReadAllText(PlaylistXMLParser.XML_SOURCE_PATH));
             var secondXML = PlaylistXMLParser.Parse(secondXMLSource.items);
@@ -30,11 +30,11 @@ namespace XML_GENERATION
 
             File.WriteAllLines(PlaylistXMLParser.SQL_PATH, sqlInserts);
 
-            //var thirdXMLSource = JsonConvert.DeserializeObject<ArtistXML>(File.ReadAllText(ArtistXMLParser.XML_SOURCE_PATH));
-            //var thirdXML = ArtistXMLParser.Parse(thirdXMLSource.items);
-            //File.WriteAllLines(ArtistXMLParser.XML_PATH, thirdXML.Select(x => x));
+            // var thirdXMLSource = JsonConvert.DeserializeObject<ArtistXML>(File.ReadAllText(ArtistXMLParser.XML_SOURCE_PATH));
+            // var thirdXML = ArtistXMLParser.Parse(thirdXMLSource.items);
+            // File.WriteAllLines(ArtistXMLParser.XML_PATH, thirdXML);
 
-            Console.ReadKey();
+           // Console.ReadKey();
         }
 
 
