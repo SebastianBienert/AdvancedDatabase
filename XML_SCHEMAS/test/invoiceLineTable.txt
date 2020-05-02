@@ -1,0 +1,48 @@
+begin
+DBMS_XMLSCHEMA.registerSchema('INVOICE.xsd',
+'<xs:schema 
+attributeFormDefault="unqualified" 
+elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns:xdb="http://xmlns.oracle.com/xdb"
+>
+  <xs:element name="Invoice" xdb:SQLType="Invoice" xdb:defaultTable="INVOICE_XML">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="InvoiceLines" xdb:SQLType="InvoiceLines" xdb:SQLCollType="InvoiceLines2" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InvoiceLine" xdb:SQLType="InvoiceLine" xdb:SQLCollType="InvoiceLine2" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:float" name="UnitPrice"/>
+                    <xs:element type="xs:int" name="Quantity"/>
+                    <xs:element name="Track6" xdb:SQLType="Track6" xdb:SQLCollType="Track7" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="Name"/>
+                          <xs:element type="xs:string" name="Mediatype"/>
+                          <xs:element type="xs:string" name="Genre"/>
+                          <xs:element type="xs:string" name="Composer"/>
+                          <xs:element type="xs:int" name="Milliseconds"/>
+                          <xs:element type="xs:int" name="Bytes"/>
+                          <xs:element type="xs:float" name="Unitprice"/>
+                        </xs:sequence>
+                        <xs:attribute type="xs:positiveInteger" name="id" use="required"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:positiveInteger" name="id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>'
+);
+end;
+
+CREATE TABLE INVOICE_XML2 OF XMLType
+XMLSCHEMA "INVOICE.xsd" ELEMENT "Invoice";
