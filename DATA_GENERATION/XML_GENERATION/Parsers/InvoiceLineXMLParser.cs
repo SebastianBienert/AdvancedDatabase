@@ -24,19 +24,18 @@ namespace XML_GENERATION.Parsers
                 var invoiceLines = g.Select(il =>
                 {
                     return $@"<InvoiceLine>
-                            <UnitPrice>{il.invoiceline_unitprice}</UnitPrice>
-                            <Quantity>{il.quantity}</Quantity>
-                            <Track id=""1"">
-                                <Name>{il.track}</Name>
-                                <Mediatype>{il.mediatype}</Mediatype>
-                                <Genre>{il.genre}</Genre>
-                                <Composer>{il.composer}</Composer>
-                                <Milliseconds>{il.milliseconds}</Milliseconds>
-                                <Bytes>{il.bytes}</Bytes>
-                                <Unitprice>{il.track_unitprice}</Unitprice>
-                            </Track>
-                        </InvoiceLine>
-                        ";
+<UnitPrice>{il.invoiceline_unitprice}</UnitPrice>
+<Quantity>{il.quantity}</Quantity>
+<Track6 id=""1"">
+    <Name>{il.track}</Name>
+    <Mediatype>{il.mediatype}</Mediatype>
+    <Genre>{il.genre}</Genre>
+    <Composer>{il.composer}</Composer>
+    <Milliseconds>{il.milliseconds}</Milliseconds>
+    <Bytes>{il.bytes}</Bytes>
+    <Unitprice>{il.track_unitprice}</Unitprice>
+</Track6>
+</InvoiceLine>";
                 });
 
                 foreach (var invoiceLine in invoiceLines)
@@ -46,7 +45,7 @@ namespace XML_GENERATION.Parsers
                 xmlStringBuilder.AppendLine("|| to_clob('</InvoiceLines>");
                 xmlStringBuilder.AppendLine("</Invoice>')");
 
-                var template = $@"INSERT INTO INVOICE_XML values xmltype({xmlStringBuilder});";
+                var template = $@"INSERT INTO INVOICE_XML2 values (XMLType({xmlStringBuilder}));";
                 return template;
             });
 
