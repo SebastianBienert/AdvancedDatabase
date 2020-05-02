@@ -1,8 +1,5 @@
 SET SQLBLANKLINES ON;
 
-ALTER TABLE Playlist 
-ADD tracksxml xmltype;
-
 UPDATE Playlist SET tracksxml = xmltype(to_clob('<Tracks>')
 || to_clob('<Track id="1209">
 <LastPurchase>04/05/2012</LastPurchase>
