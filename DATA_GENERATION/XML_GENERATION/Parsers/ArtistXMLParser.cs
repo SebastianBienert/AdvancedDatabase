@@ -9,22 +9,22 @@ namespace XML_GENERATION.Parsers
     public class ArtistXMLParser
     {
         public static string XML_SOURCE_PATH = Program.PROJECT_DIR + @"\..\..\DATA\xml3_source.json";
-        public static string XML_PATH = Program.PROJECT_DIR + @"\..\..\xml3.xml";
+        public static string XML_PATH = Program.PROJECT_DIR + @"\..\..\xml3.sql";
 
-        public static IEnumerable<(int, string)> Parse(IEnumerable<ArtistXMLItem> items)
+        public static IEnumerable<string> Parse(IEnumerable<ArtistXMLItem> items)
         {
             var artists = items.GroupBy(x => x.artistid);
             var xmls = artists.Select(g =>
             {
                 var xml = new StringBuilder();
-                xml.AppendLine(@"<?xml version=""1.0"" encoding=""UTF - 8""?>");
-                xml.AppendLine("<Albums>");
+               /// xml.AppendLine(@"<?xml version=""1.0"" encoding=""UTF - 8""?>");
+               xml.AppendLine("to_clob('<Albums>')");
                 var albums = g.GroupBy(a => a.title).Select(a =>
                 {
                     var xmlStringBuilder = new StringBuilder();
-                    xmlStringBuilder.AppendLine(@$"<Album id=""{a.First().albumid}"">");
-                    xmlStringBuilder.AppendLine($"<Title>{a.First().title}</Title>");
-                    xmlStringBuilder.AppendLine($"<Tracks>");
+                    xmlStringBuilder.AppendLine(@$"|| to_clob('<Album id=""{a.First().albumid}"">");
+                    xmlStringBuilder.AppendLine($"<Title>{a.First().title.Replace("'", "''").Replace("&", "")}</Title>");
+                    xmlStringBuilder.AppendLine($"<Tracks>')");
                     var tracks = a.GroupBy(x => x.trackid).Select(x =>
                     {
                         var trackBuilder = new StringBuilder();
@@ -39,19 +39,24 @@ namespace XML_GENERATION.Parsers
                     });
                     foreach (var track in tracks)
                     {
-                        xmlStringBuilder.AppendLine(track);
+                        xmlStringBuilder.AppendLine($"|| to_clob('{track.Replace("'", "''").Replace("&", "")}')");
                     }
-                    xmlStringBuilder.AppendLine($"</Tracks>");
-                    xmlStringBuilder.AppendLine($"</Album>");
+                    xmlStringBuilder.AppendLine($"|| to_clob('</Tracks>");
+                    xmlStringBuilder.AppendLine($"</Album>')");
                     return xmlStringBuilder.ToString();
                 });
+
                 foreach (var album in albums)
                 {
                     xml.AppendLine(album);
                 }
-                xml.AppendLine("</Albums>");
-                return (g.Key, xml.ToString());
+                xml.AppendLine("|| to_clob('</Albums>')");
+                var template = $@"UPDATE ARTIST SET ALBUMS_XML = xmltype({xml.ToString()}) WHERE ARTISTID = {g.Key};";
+                return template;
             });
+
+            xmls = xmls.Append("commit; \r\n").Append("exit;");
+            xmls = xmls.Prepend("SET SQLBLANKLINES ON;");
             return xmls;
         }
     }
