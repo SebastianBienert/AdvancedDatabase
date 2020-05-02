@@ -22,27 +22,27 @@ namespace XML_GENERATION.Parsers
                 var albums = g.GroupBy(a => a.title).Select(a =>
                 {
                     var xmlStringBuilder = new StringBuilder();
-                    xmlStringBuilder.AppendLine($@"|| to_clob('<Album id=""{a.First().albumid}"">");
+                    xmlStringBuilder.AppendLine($@"|| to_clob('<Album2 id=""{a.First().albumid}"">");
                     xmlStringBuilder.AppendLine($"<Title>{a.First().title.Replace("'", "''").Replace("&", "")}</Title>");
-                    xmlStringBuilder.AppendLine($"<Tracks>')");
+                    xmlStringBuilder.AppendLine($"<Tracks2>')");
                     var tracks = a.GroupBy(x => x.trackid).Select(x =>
                     {
                         var trackBuilder = new StringBuilder();
-                        trackBuilder.AppendLine($@"<Track id=""{x.Key}"">");
+                        trackBuilder.AppendLine($@"<Track3 id=""{x.Key}"">");
                         trackBuilder.AppendLine($"<Name>{x.First().name}</Name>");
                         trackBuilder.AppendLine($"<Composer>{x.First().composer}</Composer>");
                         trackBuilder.AppendLine($"<Milliseconds>{x.First().milliseconds}</Milliseconds>");
                         trackBuilder.AppendLine($"<Bytes>{x.First().bytes}</Bytes>");
                         trackBuilder.AppendLine($"<Unitprice>{x.First().unitprice}</Unitprice>");
-                        trackBuilder.AppendLine($@"</Track>");
+                        trackBuilder.AppendLine($@"</Track3>");
                         return trackBuilder.ToString();
                     });
                     foreach (var track in tracks)
                     {
                         xmlStringBuilder.AppendLine($"|| to_clob('{track.Replace("'", "''").Replace("&", "")}')");
                     }
-                    xmlStringBuilder.AppendLine($"|| to_clob('</Tracks>");
-                    xmlStringBuilder.AppendLine($"</Album>')");
+                    xmlStringBuilder.AppendLine($"|| to_clob('</Tracks2>");
+                    xmlStringBuilder.AppendLine($"</Album2>')");
                     return xmlStringBuilder.ToString();
                 });
 
