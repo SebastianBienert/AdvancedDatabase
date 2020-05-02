@@ -17,7 +17,7 @@ namespace XML_GENERATION
         static void Main(string[] args)
         {
             var firstXmlSource = JsonConvert.DeserializeObject<InvoiceLineXML>(File.ReadAllText(InvoiceLineXMLParser.XML1_SOURCE_PATH));
-            var firstXml = InvoiceLineXMLParser.Parse(firstXmlSource.items.Take(10));
+            var firstXml = InvoiceLineXMLParser.Parse(firstXmlSource.items);
             File.WriteAllLines(InvoiceLineXMLParser.FIRST_XML_PATH, firstXml);
 
             var secondXMLSource = JsonConvert.DeserializeObject<PlaylistXML>(File.ReadAllText(PlaylistXMLParser.XML_SOURCE_PATH));
