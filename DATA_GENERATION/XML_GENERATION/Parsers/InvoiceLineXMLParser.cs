@@ -17,12 +17,12 @@ namespace XML_GENERATION.Parsers
             var xmls = invoices.Select(g =>
             {
                 var xmlStringBuilder = new StringBuilder();
-                xmlStringBuilder.AppendLine(@$"<Invoice id=""{g.Key}"">");
+                xmlStringBuilder.AppendLine($@"<Invoice id=""{g.Key}"">");
                 xmlStringBuilder.AppendLine("<InvoiceLines>");
 
                 var invoiceLines = g.Select(il =>
                 {
-                    return @$"<InvoiceLine>
+                    return $@"<InvoiceLine>
                             <UnitPrice>{il.invoiceline_unitprice}</UnitPrice>
                             <Quantity>2</Quantity>
                             <Track id=""1"">

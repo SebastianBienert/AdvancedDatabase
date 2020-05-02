@@ -20,26 +20,26 @@ namespace XML_GENERATION.Parsers
             {
                 var xml = new StringBuilder();
                 //xml.AppendLine(@"<?xml version=""1.0"" encoding=""UTF - 8""?>");
-                xml.AppendLine("<Tracks>");
+                xml.AppendLine("to_clob('<Tracks>')");
                 var tracks = g.GroupBy(x => x.trackid).Select(t =>
                 {
                     var xmlStringBuilder = new StringBuilder();
                     var invoiceDates = t.Select(x => DateTime.ParseExact(x.invoicedate, "dd/MM/yyyy", null));
                     var maxDate = invoiceDates.Max();
-                    xmlStringBuilder.AppendLine($@"<Track id=""{t.Key}"">");
+                    xmlStringBuilder.AppendLine($@"|| to_clob('<Track id=""{t.Key}"">");
                     xmlStringBuilder.AppendLine($"<LastPurchase>{maxDate:dd/MM/yyyy}</LastPurchase>");
                     xmlStringBuilder.AppendLine($"<Genre>{t.First().genre}</Genre>");
                     xmlStringBuilder.AppendLine($"<Length>{t.First().milliseconds}</Length>");
                     xmlStringBuilder.AppendLine($"<Name>{t.First().track}</Name>");
                     xmlStringBuilder.AppendLine($"<Composer>{t.First().composer}</Composer>");
-                    xmlStringBuilder.AppendLine($"</Track>");
+                    xmlStringBuilder.AppendLine($"</Track>')");
                     return xmlStringBuilder.ToString();
                 });
                 foreach (var track in tracks)
                 {
                     xml.AppendLine(track);
                 }
-                xml.AppendLine("</Tracks>");
+                xml.AppendLine("|| to_clob('</Tracks>')");
                 return (g.Key, xml.ToString());
             });
             return xmls;
