@@ -9,7 +9,7 @@ namespace XML_GENERATION.Parsers
     public class InvoiceLineXMLParser
     {
         public static string XML1_SOURCE_PATH = Program.PROJECT_DIR + @"\..\..\DATA\xml1_source.json";
-        public static string FIRST_XML_PATH = Program.PROJECT_DIR + @"\..\..\xml1.xml";
+        public static string FIRST_XML_PATH = Program.PROJECT_DIR + @"\..\..\xml1.sql";
 
         public static IEnumerable<string> Parse(IEnumerable<InvoiceLineXMLItem> items)
         {
@@ -17,14 +17,15 @@ namespace XML_GENERATION.Parsers
             var xmls = invoices.Select(g =>
             {
                 var xmlStringBuilder = new StringBuilder();
-                xmlStringBuilder.AppendLine($@"<Invoice id=""{g.Key}"">");
-                xmlStringBuilder.AppendLine("<InvoiceLines>");
+
+                xmlStringBuilder.AppendLine(@$"to_clob('<Invoice id=""{g.Key}"">");
+                xmlStringBuilder.AppendLine("<InvoiceLines>')");
 
                 var invoiceLines = g.Select(il =>
                 {
                     return $@"<InvoiceLine>
                             <UnitPrice>{il.invoiceline_unitprice}</UnitPrice>
-                            <Quantity>2</Quantity>
+                            <Quantity>{il.quantity}</Quantity>
                             <Track id=""1"">
                                 <Name>{il.track}</Name>
                                 <Mediatype>{il.mediatype}</Mediatype>
@@ -40,14 +41,17 @@ namespace XML_GENERATION.Parsers
 
                 foreach (var invoiceLine in invoiceLines)
                 {
-                    xmlStringBuilder.Append(invoiceLine);
+                    xmlStringBuilder.Append($"|| to_clob('{invoiceLine.Replace("'", "''").Replace("&", "")}')");
                 }
-                xmlStringBuilder.AppendLine("</InvoiceLines>");
-                xmlStringBuilder.AppendLine("</Invoice>");
+                xmlStringBuilder.AppendLine("|| to_clob('</InvoiceLines>");
+                xmlStringBuilder.AppendLine("</Invoice>')");
 
-                return xmlStringBuilder.ToString();
+                var template = $@"INSERT INTO INVOICE_XML values xmltype({xmlStringBuilder});";
+                return template;
             });
 
+            xmls = xmls.Append("commit; \r\n").Append("exit;");
+            xmls = xmls.Prepend("SET SQLBLANKLINES ON;");
             return xmls;
         }
     }
