@@ -20,18 +20,24 @@ namespace XML_GENERATION
             // var firstXml = InvoiceLineXMLParser.Parse(firstXmlSource.items);
             // File.WriteAllLines(InvoiceLineXMLParser.FIRST_XML_PATH, firstXml);
 
-            // var secondXMLSource = JsonConvert.DeserializeObject<PlaylistXML>(File.ReadAllText(PlaylistXMLParser.XML_SOURCE_PATH));
-            // var secondXML = PlaylistXMLParser.Parse(secondXMLSource.items);
-            // File.WriteAllLines(PlaylistXMLParser.XML_PATH, secondXML.Select(x => x.Item2));
+            var secondXMLSource = JsonConvert.DeserializeObject<PlaylistXML>(File.ReadAllText(PlaylistXMLParser.XML_SOURCE_PATH));
+            var secondXML = PlaylistXMLParser.Parse(secondXMLSource.items);
 
-            var thirdXMLSource = JsonConvert.DeserializeObject<ArtistXML>(File.ReadAllText(ArtistXMLParser.XML_SOURCE_PATH));
-            var thirdXML = ArtistXMLParser.Parse(thirdXMLSource.items);
-            File.WriteAllLines(ArtistXMLParser.XML_PATH, thirdXML.Select(x => x.Item2));
+            var sqlInserts = secondXML.Select(x =>
+            {
+                return $@"UPDATE Playlist SET tracksxml = q'[{x.Item2.Replace("'", "\\'").Replace("&", "")}]' WHERE PlaylistId = {x.Item1};";
+            });
+
+            File.WriteAllLines(PlaylistXMLParser.SQL_PATH, sqlInserts);
+
+            //var thirdXMLSource = JsonConvert.DeserializeObject<ArtistXML>(File.ReadAllText(ArtistXMLParser.XML_SOURCE_PATH));
+            //var thirdXML = ArtistXMLParser.Parse(thirdXMLSource.items.Take(3));
+            //File.WriteAllLines(ArtistXMLParser.XML_PATH, thirdXML.Select(x => x.Item2));
 
             Console.ReadKey();
         }
 
-       
+
 
     }
 

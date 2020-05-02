@@ -9,8 +9,9 @@ namespace XML_GENERATION.Parsers
 {
     public class PlaylistXMLParser
     {
-        public static string XML_SOURCE_PATH = Program.PROJECT_DIR + @"\..\..\DATA\xml3_source.json";
-        public static string XML_PATH = Program.PROJECT_DIR + @"\..\..\xml3.xml";
+        public static string XML_SOURCE_PATH = Program.PROJECT_DIR + @"\..\..\DATA\xml2_source.json";
+        public static string XML_PATH = Program.PROJECT_DIR + @"\..\..\xml2.xml";
+        public static string SQL_PATH = Program.PROJECT_DIR + @"\..\..\sql2.sql";
 
         public static IEnumerable<(int, string)> Parse(IEnumerable<PlaylistXMLItem> items)
         {
@@ -18,14 +19,14 @@ namespace XML_GENERATION.Parsers
             var xmls = playlists.Select(g =>
             {
                 var xml = new StringBuilder();
-                xml.AppendLine(@"<?xml version=""1.0"" encoding=""UTF - 8""?>");
+                //xml.AppendLine(@"<?xml version=""1.0"" encoding=""UTF - 8""?>");
                 xml.AppendLine("<Tracks>");
                 var tracks = g.GroupBy(x => x.trackid).Select(t =>
                 {
                     var xmlStringBuilder = new StringBuilder();
-                    var invoiceDates = t.Select(x => DateTime.Parse(x.invoicedate));
+                    var invoiceDates = t.Select(x => DateTime.ParseExact(x.invoicedate, "dd/MM/yyyy", null));
                     var maxDate = invoiceDates.Max();
-                    xmlStringBuilder.AppendLine(@$"<Track id=""{t.Key}"">");
+                    xmlStringBuilder.AppendLine($@"<Track id=""{t.Key}"">");
                     xmlStringBuilder.AppendLine($"<LastPurchase>{maxDate:dd/MM/yyyy}</LastPurchase>");
                     xmlStringBuilder.AppendLine($"<Genre>{t.First().genre}</Genre>");
                     xmlStringBuilder.AppendLine($"<Length>{t.First().milliseconds}</Length>");
