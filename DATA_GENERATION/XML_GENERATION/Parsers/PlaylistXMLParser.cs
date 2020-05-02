@@ -28,10 +28,10 @@ namespace XML_GENERATION.Parsers
                     var maxDate = invoiceDates.Max();
                     xmlStringBuilder.AppendLine($@"|| to_clob('<Track id=""{t.Key}"">");
                     xmlStringBuilder.AppendLine($"<LastPurchase>{maxDate:dd/MM/yyyy}</LastPurchase>");
-                    xmlStringBuilder.AppendLine($"<Genre>{t.First().genre}</Genre>");
+                    xmlStringBuilder.AppendLine($"<Genre>{t.First().genre?.Replace("'", "")}</Genre>");
                     xmlStringBuilder.AppendLine($"<Length>{t.First().milliseconds}</Length>");
-                    xmlStringBuilder.AppendLine($"<Name>{t.First().track}</Name>");
-                    xmlStringBuilder.AppendLine($"<Composer>{t.First().composer}</Composer>");
+                    xmlStringBuilder.AppendLine($"<Name>{t.First().track?.Replace("'", "")}</Name>");
+                    xmlStringBuilder.AppendLine($"<Composer>{t.First().composer?.Replace("'", "")}</Composer>");
                     xmlStringBuilder.AppendLine($"</Track>')");
                     return xmlStringBuilder.ToString();
                 });

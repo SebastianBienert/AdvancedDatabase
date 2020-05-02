@@ -25,14 +25,14 @@ namespace XML_GENERATION
 
             var sqlInserts = secondXML.Select(x =>
             {
-                return $@"UPDATE Playlist SET tracksxml = q'[{x.Item2.Replace("'", "\\'").Replace("&", "")}]' WHERE PlaylistId = {x.Item1};";
+                return $@"UPDATE Playlist SET tracksxml = xmltype({x.Item2.Replace("&", "")}) WHERE PlaylistId = {x.Item1};";
             });
 
             File.WriteAllLines(PlaylistXMLParser.SQL_PATH, sqlInserts);
 
             //var thirdXMLSource = JsonConvert.DeserializeObject<ArtistXML>(File.ReadAllText(ArtistXMLParser.XML_SOURCE_PATH));
-            //var thirdXML = ArtistXMLParser.Parse(thirdXMLSource.items.Take(3));
-            //File.WriteAllLines(ArtistXMLParser.XML_PATH, thirdXML.Select(x => x.Item2));
+            //var thirdXML = ArtistXMLParser.Parse(thirdXMLSource.items);
+            //File.WriteAllLines(ArtistXMLParser.XML_PATH, thirdXML.Select(x => x));
 
             Console.ReadKey();
         }
