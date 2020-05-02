@@ -1,0 +1,50 @@
+begin
+DBMS_XMLSCHEMA.registerSchema('Albums_detail.xsd',
+'<xs:schema 
+attributeFormDefault="unqualified" 
+elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns:xdb="http://xmlns.oracle.com/xdb"
+>
+  <xs:element name="Albums" xdb:SQLType="Albums" xdb:defaultTable="Albums1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Album2" xdb:SQLType="Album2" xdb:SQLCollType="Album3" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="Title"/>
+              <xs:element name="Tracks2" xdb:SQLType="Tracks2" xdb:SQLCollType="Track4" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Track3" xdb:SQLType="Track3" xdb:SQLCollType="Track4" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="Name"/>
+                          <xs:element type="xs:string" name="Composer"/>
+                          <xs:element type="xs:int" name="Miliseconds"/>
+                          <xs:element type="xs:int" name="Bytes"/>
+                          <xs:element type="xs:float" name="Unitprice"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:positiveInteger" name="id" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>'
+);
+end;
+
+CREATE TABLE Artist_XML
+(
+    ArtistId NUMBER NOT NULL,
+    Name VARCHAR2(120),
+    Albums XMLTYPE
+)
+XMLTYPE COLUMN Albums
+XMLSCHEMA "Albums_detail.xsd" ELEMENT "Albums";

@@ -1,0 +1,38 @@
+begin
+DBMS_XMLSCHEMA.registerSchema('playlist_detail.xsd',
+'<xs:schema 
+attributeFormDefault="unqualified" 
+elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns:xdb="http://xmlns.oracle.com/xdb"
+>
+  <xs:element name="Tracks" xdb:SQLType="Tracks" xdb:defaultTable="Playlists">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Track" xdb:SQLType="Track" xdb:SQLCollType="Track2" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="LastPurchase"/>
+              <xs:element type="xs:string" name="Genre"/>
+              <xs:element type="xs:integer" name="Length"/>
+              <xs:element type="xs:string" name="Name"/>
+              <xs:element type="xs:string" name="Composer"/>
+            </xs:sequence>
+            <xs:attribute type="xs:positiveInteger" name="id" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>'
+);
+end;
+
+CREATE TABLE Playlist_XML
+(
+    PlaylistId NUMBER NOT NULL,
+    Name VARCHAR2(120),
+    Tracks XMLTYPE
+)
+XMLTYPE COLUMN Tracks
+XMLSCHEMA "playlist_detail.xsd" ELEMENT "Tracks"
+;
