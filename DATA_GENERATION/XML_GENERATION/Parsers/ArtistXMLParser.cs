@@ -31,7 +31,7 @@ namespace XML_GENERATION.Parsers
                         trackBuilder.AppendLine($@"<Track3 id=""{x.Key}"">");
                         trackBuilder.AppendLine($"<Name>{x.First().name}</Name>");
                         trackBuilder.AppendLine($"<Composer>{x.First().composer}</Composer>");
-                        trackBuilder.AppendLine($"<Milliseconds>{x.First().milliseconds}</Milliseconds>");
+                        trackBuilder.AppendLine($"<Miliseconds>{x.First().milliseconds}</Miliseconds>");
                         trackBuilder.AppendLine($"<Bytes>{x.First().bytes}</Bytes>");
                         trackBuilder.AppendLine($"<Unitprice>{x.First().unitprice}</Unitprice>");
                         trackBuilder.AppendLine($@"</Track3>");
