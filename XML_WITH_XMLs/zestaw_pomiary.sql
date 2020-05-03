@@ -14,7 +14,7 @@ declare TIME_START TIMESTAMP; TIME_DIFF INTERVAL DAY(3) TO SECOND(9);
 BEGIN
 	--dbms_output.put_line('ZESTAW 3 - 1');
 	SELECT SYSTIMESTAMP INTO TIME_START from dual;
-	@zestaw3_1.sql
+	@zestaw3_5.sql
 
 	SELECT SYSTIMESTAMP - TIME_START INTO TIME_DIFF from dual;
 	dbms_output.put_line(TIME_DIFF);

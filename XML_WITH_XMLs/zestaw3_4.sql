@@ -14,4 +14,4 @@ XMLTYPE('<InvoiceLine>
 </Track6>
 </InvoiceLine>'))
 WHERE existsNode(r.SYS_NC_ROWINFO$, '//Genre[text()="Rock" or text()="Jazz" or text()="Metal" or text()="Blues"]') = 1 AND
-existsNode(r.SYS_NC_ROWINFO$, '//Invoice[@id<100]') = 1
+existsNode(r.SYS_NC_ROWINFO$, '//Invoice[@id<100]') = 1;

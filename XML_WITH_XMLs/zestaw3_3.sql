@@ -10,4 +10,4 @@ XMLTYPE('
     <Bytes>7393698</Bytes>
     <Unitprice>.99</Unitprice>
 </Track>'))
-WHERE existsNode(r.TRACKSXML, '//Track/Name[text()="Lord of Light"]') = 1
+WHERE existsNode(r.TRACKSXML, '//Track/Name[text()="Lord of Light"]') = 1;
