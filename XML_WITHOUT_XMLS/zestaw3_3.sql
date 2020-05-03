@@ -1,45 +1,8 @@
--- Dodanie 2 najdłuższych utworów do wszystkich playlist, które zawierają więcej niż 5 utworów, ale ich łączna długość wynosi mniej niż 100 minut.
-INSERT INTO playlisttrack (
-    trackid,
-    playlistid
-)
-    SELECT
-        trackid,
-        playlistid
-    FROM
-        ( ( (
-            SELECT
-                trackid
-            FROM
-                (
-                    SELECT
-                        trackid
-                    FROM
-                        track
-                    ORDER BY
-                        milliseconds DESC
-                )
-            WHERE
-                ROWNUM <= 2
-        ) ) ),
-        (
-            SELECT
-                playlistid
-            FROM
-                playlist
-            WHERE
-                playlistid IN (
-                    SELECT
-                        p.playlistid
-                    FROM
-                        playlist        p
-                        JOIN playlisttrack   ptr ON p.playlistid = ptr.playlistid
-                        JOIN track tr on tr.trackid = ptr.trackid
-                    GROUP BY
-                        ptr.playlistid
-                    HAVING
-                        SUM(tr.milliseconds) < 100*60*1000 and
-                        COUNT(ptr.playlistid) > 5
-                )
-        );
+-- Dodanie do każdej playlisty zawierającej utwór Lord of Light remixu tego utworu.
+INSERT INTO TRACK VALUES (122005, 'Lord of Light - Remix', 94, 2, 1, null, 444614, 7393698, 0.99)
 
+INSERT INTO PLAYLISTTRACK (PLAYLISTID, TRACKID)
+SELECT PLAYLISTTRACK.PLAYLISTID, 122005 FROM PLAYLISTTRACK
+INNER JOIN TRACK
+ON TRACK.TRACKID = PLAYLISTTRACK.TRACKID
+WHERE TRACK.NAME = 'Lord of Light'
