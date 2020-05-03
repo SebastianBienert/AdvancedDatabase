@@ -14,7 +14,6 @@ declare TIME_START TIMESTAMP; TIME_DIFF INTERVAL DAY(3) TO SECOND(9);
 BEGIN
 	--dbms_output.put_line('ZESTAW 3 - 1');
 	SELECT SYSTIMESTAMP INTO TIME_START from dual;
-
 	@zestaw3_1.sql
 
 	SELECT SYSTIMESTAMP - TIME_START INTO TIME_DIFF from dual;
@@ -124,7 +123,7 @@ alter system flush buffer_cache;
 SAVEPOINT point2;
 declare TIME_START TIMESTAMP; TIME_DIFF INTERVAL DAY(3) TO SECOND(9);
 BEGIN
-	--dbms_output.put_line('ZESTAW 3 - 7');
+	--dbms_output.put_line('ZESTAW 3 - 6');
 	SELECT SYSTIMESTAMP INTO TIME_START from dual;
 
 	@zestaw3_7.sql

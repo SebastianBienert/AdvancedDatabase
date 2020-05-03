@@ -12,7 +12,7 @@ BEGIN
             GROUP BY pt.PLAYLISTID
             HAVING COUNT(DISTINCT(t.TRACKID)) > 15) fpt
         JOIN PLAYLISTTRACK playtrack on fpt.PLAYLISTID = playtrack.PLAYLISTID
-        JOIN TRACK tr on tr.TRACKID = playtrack.TRACKID;
+        JOIN TRACK tr on tr.TRACKID = playtrack.TRACKID
 	) 
 	loop
 		playlistID := v_rec.PLAYLISTID;

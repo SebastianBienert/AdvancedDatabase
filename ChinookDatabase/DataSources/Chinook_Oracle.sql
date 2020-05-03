@@ -169,7 +169,142 @@ CREATE TABLE Track
     CONSTRAINT PK_Track PRIMARY KEY  (TrackId)
 );
 
+begin
+DBMS_XMLSCHEMA.registerSchema('Albums_detail.xsd',
+'<xs:schema 
+attributeFormDefault="unqualified" 
+elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns:xdb="http://xmlns.oracle.com/xdb"
+>
+  <xs:element name="Albums" xdb:SQLType="Albums" xdb:defaultTable="Albums1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Album2" xdb:SQLType="Album2" xdb:SQLCollType="Album3" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="Title"/>
+              <xs:element name="Tracks2" xdb:SQLType="Tracks2" xdb:SQLCollType="Track100" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Track3" xdb:SQLType="Track3" xdb:SQLCollType="Track99" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="Name"/>
+                          <xs:element type="xs:string" name="Composer"/>
+                          <xs:element type="xs:integer" name="Milliseconds"/>
+                          <xs:element type="xs:integer" name="Bytes"/>
+                          <xs:element type="xs:float" name="Unitprice"/>
+                        </xs:sequence>
+						<xs:attribute type="xs:positiveInteger" name="id" use="required"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:positiveInteger" name="id" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>'
+);
+end;
 
+/
+
+begin
+DBMS_XMLSCHEMA.registerSchema('playlist_detail.xsd',
+'<xs:schema 
+attributeFormDefault="unqualified" 
+elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns:xdb="http://xmlns.oracle.com/xdb"
+>
+  <xs:element name="Tracks" xdb:SQLType="Tracks" xdb:defaultTable="Playlists">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Track" xdb:SQLType="Track" xdb:SQLCollType="Track2" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="LastPurchase"/>
+              <xs:element type="xs:string" name="Genre"/>
+              <xs:element type="xs:integer" name="Length"/>
+              <xs:element type="xs:string" name="Name"/>
+              <xs:element type="xs:string" name="Composer"/>
+            </xs:sequence>
+            <xs:attribute type="xs:positiveInteger" name="id" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>'
+);
+end;
+
+/
+
+begin
+DBMS_XMLSCHEMA.registerSchema('INVOICE.xsd',
+'<xs:schema 
+attributeFormDefault="unqualified" 
+elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns:xdb="http://xmlns.oracle.com/xdb"
+>
+  <xs:element name="Invoice" xdb:SQLType="Invoice" xdb:defaultTable="INVOICE_XML">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="InvoiceLines" xdb:SQLType="InvoiceLines" xdb:SQLCollType="InvoiceLines2" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InvoiceLine" xdb:SQLType="InvoiceLine" xdb:SQLCollType="InvoiceLine2" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:float" name="UnitPrice"/>
+                    <xs:element type="xs:int" name="Quantity"/>
+                    <xs:element name="Track6" xdb:SQLType="Track6" xdb:SQLCollType="Track7" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="Name"/>
+                          <xs:element type="xs:string" name="Mediatype"/>
+                          <xs:element type="xs:string" name="Genre"/>
+                          <xs:element type="xs:string" name="Composer"/>
+                          <xs:element type="xs:int" name="Milliseconds"/>
+                          <xs:element type="xs:int" name="Bytes"/>
+                          <xs:element type="xs:float" name="Unitprice"/>
+                        </xs:sequence>
+                        <xs:attribute type="xs:positiveInteger" name="id" use="required"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:positiveInteger" name="id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>'
+);
+end;
+
+/
+
+ALTER TABLE artist add(albums_xml XMLTYPE) 
+XMLType COLUMN albums_xml
+xmlschema "Albums_detail.xsd" ELEMENT "Albums";
+ 
+ALTER TABLE playlist add(tracksxml XMLTYPE) 
+XMLType COLUMN tracksxml
+xmlschema "playlist_detail.xsd" ELEMENT "Tracks";
+
+CREATE TABLE INVOICE_XML2 OF XMLType
+XMLSCHEMA "INVOICE.xsd" ELEMENT "Invoice";
+
+CREATE TABLE INVOICE_XML2_NOSCHEMA OF XMLType;
 
 /*******************************************************************************
    Create Primary Key Unique Indexes
@@ -15833,10 +15968,11 @@ INSERT INTO PlaylistTrack (PlaylistId, TrackId) VALUES (17, 2096);
 INSERT INTO PlaylistTrack (PlaylistId, TrackId) VALUES (17, 3290);
 INSERT INTO PlaylistTrack (PlaylistId, TrackId) VALUES (18, 597);
 
+
 @CUSTOMER1000.sql
 @INVOICE25000.sql
 @INVOICELINE150000.sql
-@XML_SCHEMAS.sql
+
 
 commit;
 exit;

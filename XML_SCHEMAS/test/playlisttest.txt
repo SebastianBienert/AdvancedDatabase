@@ -27,12 +27,5 @@ xmlns:xdb="http://xmlns.oracle.com/xdb"
 );
 end;
 
-CREATE TABLE Playlist_XML
-(
-    PlaylistId NUMBER NOT NULL,
-    Name VARCHAR2(120),
-    Tracks XMLTYPE
-)
 XMLTYPE COLUMN Tracks
 XMLSCHEMA "playlist_detail.xsd" ELEMENT "Tracks"
-;

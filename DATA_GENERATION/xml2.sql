@@ -66103,3 +66103,7 @@ UPDATE Playlist SET tracksxml = xmltype(to_clob('<Tracks>')
 
 || to_clob('</Tracks>')
 ) WHERE PlaylistId = 18;
+
+commit; 
+
+exit;
