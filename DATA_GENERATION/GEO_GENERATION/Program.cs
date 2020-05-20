@@ -13,10 +13,14 @@ namespace GEO_GENERATION
         static void Main(string[] args)
         {
             var customerGeoSource = JsonConvert.DeserializeObject<CustomerGEO>(File.ReadAllText(CustomerGeoParser.XML_SOURCE_PATH));
-            var customerSQL = CustomerGeoParser.Parse(customerGeoSource.items.Take(1));
+            var customerSQL = CustomerGeoParser.Parse(customerGeoSource.items);
             File.WriteAllLines(CustomerGeoParser.SQL_PATH, customerSQL);
 
-           // Console.ReadKey();
+            var employeeGeoSource = JsonConvert.DeserializeObject<EmployeeGEO>(File.ReadAllText(EmployeeGeoParser.XML_SOURCE_PATH));
+            var employeeSQL = EmployeeGeoParser.Parse(employeeGeoSource.items);
+            File.WriteAllLines(EmployeeGeoParser.SQL_PATH, employeeSQL);
+
+            // Console.ReadKey();
         }
     }
 }
