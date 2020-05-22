@@ -22,11 +22,27 @@ namespace GEO_GENERATION.Parsers
             {
                 var employeeAddress = geoLocator.GetCoordinatesAsync(x.address, x.city, x.state, x.postalcode, x.country).Result;
 
-                var template = @$"UPDATE EMPLOYEE SET WORKINGAREA = {BingPointToCircle(employeeAddress, RADIUS)},
-                                    X = {employeeAddress.Coordinates.Longitude.ToDotted()},
-                                    Y = {employeeAddress.Coordinates.Latitude.ToDotted()},
-                                    radius = {RADIUS}
-                                  WHERE EMPLOYEEID = {x.employeeid};";
+                //var template = @$"UPDATE EMPLOYEE SET WORKINGAREA = {BingPointToCircle(employeeAddress, RADIUS)},
+                //                    X = {employeeAddress.Coordinates.Longitude.ToDotted()},
+                //                    Y = {employeeAddress.Coordinates.Latitude.ToDotted()},
+                //                    radius = {RADIUS}
+                //                  WHERE EMPLOYEEID = {x.employeeid};";
+
+                var xx = employeeAddress.Coordinates.Longitude;
+                var y = employeeAddress.Coordinates.Latitude;
+
+
+                var template = $@"UPDATE EMPLOYEE SET WORKINGAREA = SDO_GEOMETRY(
+                    2003,
+                    NULL,
+                    NULL,
+                    SDO_ELEM_INFO_ARRAY(1,1003,4),
+                    SDO_ORDINATE_ARRAY({xx-RADIUS},{y},{xx},{y+RADIUS},{xx+RADIUS},{y})
+                  ),
+                    X = {employeeAddress.Coordinates.Longitude.ToDotted()},
+                    Y = {employeeAddress.Coordinates.Latitude.ToDotted()},
+                    radius = {RADIUS}
+                  WHERE EMPLOYEEID = {x.employeeid};";
                 return template;
             });
             inserts = inserts.Append("commit; \r\n").Append("exit;");
@@ -36,7 +52,7 @@ namespace GEO_GENERATION.Parsers
 
         private static string BingPointToCircle(BingAddress center, double radius)
         {
-            var template = @$"SDO_UTIL.CIRCLE_POLYGON({center.Coordinates.Longitude.ToDotted()}, {center.Coordinates.Latitude.ToDotted()}, {radius.ToDotted()}, 1)";
+            var template = $@"SDO_UTIL.CIRCLE_POLYGON({center.Coordinates.Longitude.ToDotted()}, {center.Coordinates.Latitude.ToDotted()}, {radius.ToDotted()}, 1)";
             return template;
         }
     }
