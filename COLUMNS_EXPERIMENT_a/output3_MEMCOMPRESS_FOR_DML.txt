@@ -1,0 +1,13 @@
++000 00:00:00.065000000                                                         
++000 00:00:00.068000000                                                         
++000 00:00:00.117000000                                                         
++000 00:00:00.080000000                                                         
++000 00:00:00.314000000                                                         
+declare TIME_START TIMESTAMP; TIME_DIFF INTERVAL DAY(3) TO SECOND(9);
+*
+ERROR at line 1:
+ORA-29861: domain index is marked LOADING/FAILED/UNUSABLE 
+ORA-06512: at line 6 
+
+
++000 00:00:00.045000000                                                         
