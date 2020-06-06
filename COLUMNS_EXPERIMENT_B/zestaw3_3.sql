@@ -1,0 +1,16 @@
+DECLARE
+   count_num NUMBER;
+BEGIN
+	SELECT COUNT(*) as Count
+	INTO count_num
+	FROM (
+		SELECT customer.CUSTOMERID
+		FROM CUSTOMER customer
+		JOIN INVOICE i on i.CUSTOMERID = customer.CUSTOMERID
+		JOIN INVOICELINE il on il.INVOICEID = i.INVOICEID
+		JOIN TRACK track on track.TRACKID = il.TRACKID
+		JOIN GENRE genr on track.GENREID = genr.GENREID
+		GROUP BY customer.CUSTOMERID
+		HAVING COUNT(UNIQUE(genr.GENREID)) < 6
+		);
+END;
